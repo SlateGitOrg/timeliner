@@ -1,0 +1,36 @@
+[package]
+name = "timeliner"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Linux forensic super-timeline builder: parses auth/syslog/cron, shell history, utmp/wtmp/btmp, journal export, TSK bodyfiles and dpkg/apt logs into one normalized, tagged timeline."
+license = "MIT"
+readme = "README.md"
+keywords = ["dfir", "forensics", "timeline", "linux", "incident-response"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "timeliner"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+chrono = { version = "0.4", default-features = false, features = ["std"] }
+clap = { version = "4", features = ["derive"] }
+flate2 = "1"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+sha2 = "0.10"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt", "env-filter", "ansi"] }
+
+[dev-dependencies]
+proptest = "1"
+tempfile = "3"
+
+[profile.release]
+debug = 1
