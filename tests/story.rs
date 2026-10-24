@@ -133,6 +133,59 @@ fn year_inference_is_load_bearing_without_the_journal() {
     assert!(check.found.iter().any(|(id, i)| id == "S17" && i.is_none()));
 }
 
+/// Review finding: one forged `#<epoch>` line in the suspect's own shell
+/// history moved every year-less event to 2049/2050. With and without the
+/// journal, the forged line must not change the anchor, the dedup count or the
+/// story.
+#[test]
+fn forged_shell_history_timestamp_does_not_move_year_inference() {
+    let root = committed().join("evidence");
+    let dir = tempfile::tempdir().unwrap();
+    let forged = dir.path().join(".bash_history");
+    let mut data = fs::read(root.join("home/deploy/.bash_history")).unwrap();
+    data.extend_from_slice(b"#2524608000\necho future\n");
+    fs::write(&forged, data).unwrap();
+    let files = discover::discover(&[InputSpec::parse(root.to_str().unwrap())]).unwrap();
+    assert!(
+        files
+            .iter()
+            .any(|f| f.display == "home/deploy/.bash_history")
+    );
+    let tampered: Vec<_> = files
+        .iter()
+        .cloned()
+        .map(|mut f| {
+            if f.display == "home/deploy/.bash_history" {
+                f.path = forged.clone();
+            }
+            f
+        })
+        .collect();
+    for keep_journal in [true, false] {
+        let pick = |v: &[discover::ArtifactFile]| -> Vec<discover::ArtifactFile> {
+            v.iter()
+                .filter(|f| keep_journal || f.kind != ArtifactKind::JournalExport)
+                .cloned()
+                .collect()
+        };
+        let clean = pipeline::build_from_files(&pick(&files), &BuildOptions::default()).unwrap();
+        let bad = pipeline::build_from_files(&pick(&tampered), &BuildOptions::default()).unwrap();
+        assert_eq!(bad.report.year_anchor, clean.report.year_anchor);
+        assert_eq!(
+            bad.report.duplicates_merged, clean.report.duplicates_merged,
+            "journal kept: {keep_journal}"
+        );
+        assert!(check_story(&truth(), &bad.events).passed());
+        for e in bad.events.iter().filter(|e| e.time_flags.year_inferred) {
+            assert!(
+                e.ts.format("%Y").to_string().as_str() <= "2025",
+                "{}",
+                e.raw
+            );
+        }
+    }
+}
+
 #[test]
 fn deduplication_merges_journal_and_cron_copies() {
     let tl = build(&committed().join("evidence"), &BuildOptions::default());

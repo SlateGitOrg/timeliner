@@ -110,9 +110,24 @@ The absolute year is pinned at the last entry:
   in which the last entry's date exists and is ≤ `limit`. Checking that the
   date exists makes `Feb 29` pick a leap year.
 
-The pipeline computes `limit` as *newest absolute timestamp in the evidence
-(wtmp, journal, histories, dpkg/apt; not the bodyfile, whose times can be
-forged or set at collection) + 1 day*, converted to local time.
+The pipeline computes `limit` as *newest trusted absolute timestamp + 1 day*,
+converted to local time (`pipeline::robust_newest`):
+
+- **Tiers.** System records (wtmp/btmp/utmp, journal, dpkg/apt) are used
+  first. Shell histories, which the suspect account can write freely, are used
+  only when no system record has a timestamp, and the report says so. The
+  bodyfile never anchors (timestomping, collection-time mtimes).
+- **Rejection.** Values after the analysis clock + 1 day are dropped. Then,
+  with the values sorted, the largest tail of at most 1 % of them (at least
+  one) that sits more than 366 days after the rest is dropped.
+- **Warning.** If the newest artifact alone is more than 30 days ahead of every
+  other anchoring artifact, a warning names it.
+- **No absolute timestamps.** `NotAfter(analysis clock + 1 day)`, not "the
+  current year", so rotated files (`auth.log.2.gz` with November entries
+  analysed in October) land in the previous year and stay in order.
+
+Every rejection or warning goes to the log, to `report.warnings` as
+`(year anchor)` and to the report's year-anchor line.
 
 Cost: O(n) time and O(n) memory for the per-line relative years.
 
@@ -126,8 +141,9 @@ Cost: O(n) time and O(n) memory for the per-line relative years.
 2. **Phase A**, in parallel: every artifact that doesn't need year inference.
    Workers pull file indices from an `AtomicUsize`, and results land in
    per-index slots, so the output doesn't depend on thread scheduling.
-3. **Year anchor**: from phase A's newest anchoring timestamp, else `--year`,
-   else the wall clock (flagged).
+3. **Year anchor**: `--year` if given, else phase A's newest trusted
+   timestamp after outlier rejection (system records first, shell histories
+   only without them), else the analysis clock as an upper bound (flagged).
 4. **Phase B**, in parallel: syslog-family files with the anchor.
 5. **Sort** by `(ts, source, artifact, location)`: a total, stable and
    deterministic order. O(n log n).

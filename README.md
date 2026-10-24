@@ -48,7 +48,7 @@ see how such a tool is built and tested against a known ground truth.
   - `journalctl -o export`, including binary-length fields
   - Sleuth Kit bodyfile: names may contain `|`, fractional times, MACB grouping (`M..B`)
   - `dpkg.log` state changes and `apt/history.log` transactions
-- **Time**: TZif v1–v4 reader with POSIX-rule footer, POSIX `TZ` strings, fixed offsets and IANA names. DST overlaps resolve to the earlier instant and gaps shift forward; both are flagged on the event. Year inference is a single O(n) pass anchored to the newest absolute timestamp in the evidence. The evidence's `etc/localtime` symlink is resolved *inside* the evidence root.
+- **Time**: TZif v1–v4 reader with POSIX-rule footer, POSIX `TZ` strings, fixed offsets and IANA names. DST overlaps resolve to the earlier instant and gaps shift forward; both are flagged on the event. Year inference is a single O(n) pass anchored to the newest system-record timestamp in the evidence (wtmp/btmp/utmp, journal, dpkg/apt; shell histories only when none exist), with future and outlying values rejected. The evidence's `etc/localtime` symlink is resolved *inside* the evidence root.
 - **Dedup** across artifacts: same kind, host, user and description within 2 s, never inside one artifact (three identical failed passwords are three attempts).
 - **Rules** (YAML): matchers `equals/in/contains/starts_with/ends_with/regex/cidr/exists/not`, `unless` exclusions, `threshold` (count in a sliding window per group) and `first_seen` (new value per group, optional baseline). There are 19 default rules, covering brute force, SSH from a new IP, sudo to root, root shell, new user, admin group, crontab, cron from `/tmp`, downloads to `/tmp`, tooling installs, history and log tampering, and more.
 - **Outputs**: JSONL, CSV, l2tcsv (17 columns, UTC), aligned text, and a single-file HTML report with findings, an activity histogram and a filterable timeline. The HTML is locked down by a hash-based CSP and renders text only. CSV cells are guarded against formula injection, and text output escapes terminal control sequences.
@@ -121,7 +121,7 @@ offline against the committed synthetic incident in
 == 2. Build the super-timeline (zone from the evidence's own /etc/localtime)
 timeliner: 1553 events (3306 parsed, 1753 duplicates merged) from 14 artifacts
   time zone: America/New_York (evidence etc/localtime)
-  years:     inferred: year-less entries end no later than 2025-01-02 00:34:12 local (newest absolute timestamp + 1 day)
+  years:     inferred: year-less entries end no later than 2025-01-02 00:34:12 local (newest system-record timestamp + 1 day)
   range:     2024-02-02T05:00:00.000000Z .. 2025-01-01T05:34:13.000000Z
   var/log/auth.log                                 auth_log            956 records     956 events    0 warnings
   var/log/journal/web01.export                     journal_export     1362 records    1362 events    0 warnings
@@ -208,8 +208,13 @@ parallel, one file per worker. A single huge file is parsed by one thread.
   analyst's own zone. If there's no zone, timeliner warns and assumes UTC,
   and the report says so.
 - **Years come from the evidence, not the clock.** Phase A parses the
-  absolute-time artifacts first. The newest timestamp plus one day caps the
-  year-less logs. The wall clock is only a last resort, and the report flags it.
+  absolute-time artifacts first. The newest timestamp from a *system* record
+  (wtmp/btmp/utmp, journal, dpkg/apt) plus one day caps the year-less logs.
+  User-writable shell histories count only when no system record exists.
+  Timestamps after the analysis clock, and a tiny tail (≤ 1 %) more than a
+  year past everything else, are rejected and reported. With no absolute
+  timestamps at all, the analysis clock is the cap (an upper bound, never "the
+  current year"), and the report flags it.
 - **Dedup by meaning, not by bytes.** auth.log, syslog and journald copies
   normalize to the same description, so they merge. Each provenance is kept in
   `also_seen`.
@@ -218,7 +223,7 @@ parallel, one file per worker. A single huge file is parsed by one thread.
 - **Reports are reproducible.** No generation timestamp, stable sort keys and
   seeded fixtures.
 
-There are 15 rulings with their trade-offs in [DECISIONS.md](DECISIONS.md).
+There are 17 rulings with their trade-offs in [DECISIONS.md](DECISIONS.md).
 
 ## Limitations
 

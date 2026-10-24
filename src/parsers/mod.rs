@@ -67,6 +67,16 @@ impl ParseOutput {
     }
 }
 
+/// Trust level of an artifact's timestamps as a year anchor
+/// (see [`ArtifactKind::anchor_tier`]).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+pub enum AnchorTier {
+    /// Written by privileged system components (wtmp/btmp/utmp, journal, dpkg/apt).
+    System,
+    /// Freely writable by an unprivileged account (shell histories).
+    UserWritable,
+}
+
 /// Supported artifact formats.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord, Serialize)]
 #[serde(rename_all = "snake_case")]
@@ -168,21 +178,31 @@ impl ArtifactKind {
         )
     }
 
-    /// True when the artifact's timestamps are absolute and trustworthy
-    /// enough to anchor year inference for the year-less logs.
-    pub fn anchors_years(self) -> bool {
-        matches!(
-            self,
+    /// Whether, and how much, the artifact's absolute timestamps may anchor
+    /// year inference for the year-less logs (`None`: never).
+    ///
+    /// Only records written by privileged system components (login
+    /// accounting, journald, dpkg/apt) are [`AnchorTier::System`]. Shell
+    /// histories are [`AnchorTier::UserWritable`]: the suspect account can
+    /// write any `#<epoch>` line into them, so they are consulted only when
+    /// the evidence holds no system record at all. The bodyfile is never
+    /// used (timestomping, collection-time mtimes).
+    pub fn anchor_tier(self) -> Option<AnchorTier> {
+        match self {
             ArtifactKind::Wtmp
-                | ArtifactKind::Btmp
-                | ArtifactKind::Utmp
-                | ArtifactKind::JournalExport
-                | ArtifactKind::BashHistory
-                | ArtifactKind::ZshHistory
-                | ArtifactKind::FishHistory
-                | ArtifactKind::DpkgLog
-                | ArtifactKind::AptHistory
-        )
+            | ArtifactKind::Btmp
+            | ArtifactKind::Utmp
+            | ArtifactKind::JournalExport
+            | ArtifactKind::DpkgLog
+            | ArtifactKind::AptHistory => Some(AnchorTier::System),
+            ArtifactKind::BashHistory | ArtifactKind::ZshHistory | ArtifactKind::FishHistory => {
+                Some(AnchorTier::UserWritable)
+            }
+            ArtifactKind::AuthLog
+            | ArtifactKind::Syslog
+            | ArtifactKind::CronLog
+            | ArtifactKind::Bodyfile => None,
+        }
     }
 
     /// Runs the matching parser.
