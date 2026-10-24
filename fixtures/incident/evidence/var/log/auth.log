@@ -1,0 +1,956 @@
+Dec 28 00:15:01 web01 CRON[1231]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 00:15:02 web01 CRON[1231]: pam_unix(cron:session): session closed for user root
+Dec 28 00:30:01 web01 CRON[1234]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 00:30:02 web01 CRON[1234]: pam_unix(cron:session): session closed for user root
+Dec 28 00:45:01 web01 CRON[1236]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 00:45:02 web01 CRON[1236]: pam_unix(cron:session): session closed for user root
+Dec 28 01:00:01 web01 CRON[1241]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 01:00:02 web01 CRON[1241]: pam_unix(cron:session): session closed for user root
+Dec 28 01:15:01 web01 CRON[1281]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 01:15:02 web01 CRON[1281]: pam_unix(cron:session): session closed for user root
+Dec 28 01:30:01 web01 CRON[1316]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 01:30:02 web01 CRON[1316]: pam_unix(cron:session): session closed for user root
+Dec 28 01:45:01 web01 CRON[1353]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 01:45:02 web01 CRON[1353]: pam_unix(cron:session): session closed for user root
+Dec 28 02:00:01 web01 CRON[1355]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 02:00:02 web01 CRON[1355]: pam_unix(cron:session): session closed for user root
+Dec 28 02:15:01 web01 CRON[1395]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 02:15:02 web01 CRON[1395]: pam_unix(cron:session): session closed for user root
+Dec 28 02:30:01 web01 CRON[1428]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 02:30:02 web01 CRON[1428]: pam_unix(cron:session): session closed for user root
+Dec 28 02:45:01 web01 CRON[1447]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 02:45:02 web01 CRON[1447]: pam_unix(cron:session): session closed for user root
+Dec 28 03:00:01 web01 CRON[1456]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 03:00:02 web01 CRON[1456]: pam_unix(cron:session): session closed for user root
+Dec 28 03:15:01 web01 CRON[1469]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 03:15:02 web01 CRON[1469]: pam_unix(cron:session): session closed for user root
+Dec 28 03:30:01 web01 CRON[1509]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 03:30:02 web01 CRON[1509]: pam_unix(cron:session): session closed for user root
+Dec 28 03:45:01 web01 CRON[1522]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 03:45:02 web01 CRON[1522]: pam_unix(cron:session): session closed for user root
+Dec 28 04:00:01 web01 CRON[1550]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 04:00:02 web01 CRON[1550]: pam_unix(cron:session): session closed for user root
+Dec 28 04:15:01 web01 CRON[1586]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 04:15:02 web01 CRON[1586]: pam_unix(cron:session): session closed for user root
+Dec 28 04:30:01 web01 CRON[1609]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 04:30:02 web01 CRON[1609]: pam_unix(cron:session): session closed for user root
+Dec 28 04:45:01 web01 CRON[1627]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 04:45:02 web01 CRON[1627]: pam_unix(cron:session): session closed for user root
+Dec 28 04:52:15 web01 sshd[8947]: Invalid user user from 198.18.110.106 port 43613
+Dec 28 04:52:17 web01 sshd[8947]: Failed password for invalid user user from 198.18.110.106 port 43613 ssh2
+Dec 28 04:52:18 web01 sshd[8947]: Connection closed by invalid user user 198.18.110.106 port 43613 [preauth]
+Dec 28 05:00:01 web01 CRON[1629]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 05:00:02 web01 CRON[1629]: pam_unix(cron:session): session closed for user root
+Dec 28 05:15:01 web01 CRON[1630]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 05:15:02 web01 CRON[1630]: pam_unix(cron:session): session closed for user root
+Dec 28 05:30:01 web01 CRON[1634]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 05:30:02 web01 CRON[1634]: pam_unix(cron:session): session closed for user root
+Dec 28 05:45:01 web01 CRON[1659]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 05:45:02 web01 CRON[1659]: pam_unix(cron:session): session closed for user root
+Dec 28 06:00:01 web01 CRON[1679]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 06:00:02 web01 CRON[1679]: pam_unix(cron:session): session closed for user root
+Dec 28 06:12:16 web01 sshd[8909]: Invalid user admin from 198.18.193.155 port 49457
+Dec 28 06:12:18 web01 sshd[8909]: Failed password for invalid user admin from 198.18.193.155 port 49457 ssh2
+Dec 28 06:12:19 web01 sshd[8909]: Connection closed by invalid user admin 198.18.193.155 port 49457 [preauth]
+Dec 28 06:15:01 web01 CRON[1699]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 06:15:02 web01 CRON[1699]: pam_unix(cron:session): session closed for user root
+Dec 28 06:30:01 web01 CRON[1711]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 06:30:02 web01 CRON[1711]: pam_unix(cron:session): session closed for user root
+Dec 28 06:33:29 web01 sshd[8898]: Invalid user test from 198.18.89.120 port 32086
+Dec 28 06:33:31 web01 sshd[8898]: Failed password for invalid user test from 198.18.89.120 port 32086 ssh2
+Dec 28 06:33:32 web01 sshd[8898]: Connection closed by invalid user test 198.18.89.120 port 32086 [preauth]
+Dec 28 06:45:01 web01 CRON[1730]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 06:45:02 web01 CRON[1730]: pam_unix(cron:session): session closed for user root
+Dec 28 06:46:04 web01 sshd[8948]: Invalid user git from 198.18.37.164 port 41204
+Dec 28 06:46:06 web01 sshd[8948]: Failed password for invalid user git from 198.18.37.164 port 41204 ssh2
+Dec 28 06:46:07 web01 sshd[8948]: Connection closed by invalid user git 198.18.37.164 port 41204 [preauth]
+Dec 28 07:00:01 web01 CRON[1767]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 07:00:02 web01 CRON[1767]: pam_unix(cron:session): session closed for user root
+Dec 28 07:15:01 web01 CRON[1798]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 07:15:02 web01 CRON[1798]: pam_unix(cron:session): session closed for user root
+Dec 28 07:20:06 web01 sshd[8986]: Invalid user admin from 198.18.130.166 port 56383
+Dec 28 07:20:08 web01 sshd[8986]: Failed password for invalid user admin from 198.18.130.166 port 56383 ssh2
+Dec 28 07:20:09 web01 sshd[8986]: Connection closed by invalid user admin 198.18.130.166 port 56383 [preauth]
+Dec 28 07:30:01 web01 CRON[1810]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 07:30:02 web01 CRON[1810]: pam_unix(cron:session): session closed for user root
+Dec 28 07:45:01 web01 CRON[1827]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 07:45:02 web01 CRON[1827]: pam_unix(cron:session): session closed for user root
+Dec 28 08:00:01 web01 CRON[1860]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 08:00:02 web01 CRON[1860]: pam_unix(cron:session): session closed for user root
+Dec 28 08:15:01 web01 CRON[1864]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 08:15:02 web01 CRON[1864]: pam_unix(cron:session): session closed for user root
+Dec 28 08:30:01 web01 CRON[1876]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 08:30:02 web01 CRON[1876]: pam_unix(cron:session): session closed for user root
+Dec 28 08:45:01 web01 CRON[1897]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 08:45:02 web01 CRON[1897]: pam_unix(cron:session): session closed for user root
+Dec 28 09:00:01 web01 CRON[1928]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 09:00:02 web01 CRON[1928]: pam_unix(cron:session): session closed for user root
+Dec 28 09:06:03 web01 sshd[9408]: Accepted publickey for alice from 198.51.100.7 port 44436 ssh2: ED25519 SHA256:Zk3q9Xc4m2VwqL1sTn8fYp0rHb6uJd5aEe7gKi2oQx4
+Dec 28 09:06:03 web01 sshd[9408]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Dec 28 09:06:03 web01 systemd-logind[612]: New session 10 of user alice.
+Dec 28 09:15:01 web01 CRON[1965]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 09:15:02 web01 CRON[1965]: pam_unix(cron:session): session closed for user root
+Dec 28 09:24:55 web01 sshd[9433]: Received disconnect from 198.51.100.7 port 44436:11: disconnected by user
+Dec 28 09:24:55 web01 sshd[9433]: Disconnected from user alice 198.51.100.7 port 44436
+Dec 28 09:24:55 web01 sshd[9433]: pam_unix(sshd:session): session closed for user alice
+Dec 28 09:24:55 web01 systemd-logind[612]: Session 10 logged out. Waiting for processes to exit.
+Dec 28 09:24:55 web01 systemd-logind[612]: Removed session 10.
+Dec 28 09:30:01 web01 CRON[1999]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 09:30:02 web01 CRON[1999]: pam_unix(cron:session): session closed for user root
+Dec 28 09:45:01 web01 CRON[2032]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 09:45:02 web01 CRON[2032]: pam_unix(cron:session): session closed for user root
+Dec 28 10:00:01 web01 CRON[2040]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 10:00:02 web01 CRON[2040]: pam_unix(cron:session): session closed for user root
+Dec 28 10:15:01 web01 CRON[2054]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 10:15:02 web01 CRON[2054]: pam_unix(cron:session): session closed for user root
+Dec 28 10:30:01 web01 CRON[2078]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 10:30:02 web01 CRON[2078]: pam_unix(cron:session): session closed for user root
+Dec 28 10:45:01 web01 CRON[2098]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 10:45:02 web01 CRON[2098]: pam_unix(cron:session): session closed for user root
+Dec 28 11:00:01 web01 CRON[2120]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 11:00:02 web01 CRON[2120]: pam_unix(cron:session): session closed for user root
+Dec 28 11:15:01 web01 CRON[2131]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 11:15:02 web01 CRON[2131]: pam_unix(cron:session): session closed for user root
+Dec 28 11:30:01 web01 CRON[2132]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 11:30:02 web01 CRON[2132]: pam_unix(cron:session): session closed for user root
+Dec 28 11:45:01 web01 CRON[2143]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 11:45:02 web01 CRON[2143]: pam_unix(cron:session): session closed for user root
+Dec 28 12:00:01 web01 CRON[2157]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 12:00:02 web01 CRON[2157]: pam_unix(cron:session): session closed for user root
+Dec 28 12:15:01 web01 CRON[2174]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 12:15:02 web01 CRON[2174]: pam_unix(cron:session): session closed for user root
+Dec 28 12:30:01 web01 CRON[2198]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 12:30:02 web01 CRON[2198]: pam_unix(cron:session): session closed for user root
+Dec 28 12:45:01 web01 CRON[2216]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 12:45:02 web01 CRON[2216]: pam_unix(cron:session): session closed for user root
+Dec 28 13:00:01 web01 CRON[2217]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 13:00:02 web01 CRON[2217]: pam_unix(cron:session): session closed for user root
+Dec 28 13:15:01 web01 CRON[2247]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 13:15:02 web01 CRON[2247]: pam_unix(cron:session): session closed for user root
+Dec 28 13:30:01 web01 CRON[2281]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 13:30:02 web01 CRON[2281]: pam_unix(cron:session): session closed for user root
+Dec 28 13:45:01 web01 CRON[2311]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 13:45:02 web01 CRON[2311]: pam_unix(cron:session): session closed for user root
+Dec 28 14:00:01 web01 CRON[2329]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 14:00:02 web01 CRON[2329]: pam_unix(cron:session): session closed for user root
+Dec 28 14:15:01 web01 CRON[2358]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 14:15:02 web01 CRON[2358]: pam_unix(cron:session): session closed for user root
+Dec 28 14:30:01 web01 CRON[2359]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 14:30:02 web01 CRON[2359]: pam_unix(cron:session): session closed for user root
+Dec 28 14:45:01 web01 CRON[2396]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 14:45:02 web01 CRON[2396]: pam_unix(cron:session): session closed for user root
+Dec 28 15:00:01 web01 CRON[2408]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 15:00:02 web01 CRON[2408]: pam_unix(cron:session): session closed for user root
+Dec 28 15:15:01 web01 CRON[2413]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 15:15:02 web01 CRON[2413]: pam_unix(cron:session): session closed for user root
+Dec 28 15:30:01 web01 CRON[2427]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 15:30:02 web01 CRON[2427]: pam_unix(cron:session): session closed for user root
+Dec 28 15:45:01 web01 CRON[2453]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 15:45:02 web01 CRON[2453]: pam_unix(cron:session): session closed for user root
+Dec 28 15:49:11 web01 sshd[8989]: Invalid user admin from 198.18.251.66 port 57484
+Dec 28 15:49:13 web01 sshd[8989]: Failed password for invalid user admin from 198.18.251.66 port 57484 ssh2
+Dec 28 15:49:14 web01 sshd[8989]: Connection closed by invalid user admin 198.18.251.66 port 57484 [preauth]
+Dec 28 16:00:01 web01 CRON[2454]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 16:00:02 web01 CRON[2454]: pam_unix(cron:session): session closed for user root
+Dec 28 16:15:01 web01 CRON[2457]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 16:15:02 web01 CRON[2457]: pam_unix(cron:session): session closed for user root
+Dec 28 16:30:01 web01 CRON[2487]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 16:30:02 web01 CRON[2487]: pam_unix(cron:session): session closed for user root
+Dec 28 16:45:01 web01 CRON[2520]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 16:45:02 web01 CRON[2520]: pam_unix(cron:session): session closed for user root
+Dec 28 17:00:01 web01 CRON[2546]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 17:00:02 web01 CRON[2546]: pam_unix(cron:session): session closed for user root
+Dec 28 17:15:01 web01 CRON[2557]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 17:15:02 web01 CRON[2557]: pam_unix(cron:session): session closed for user root
+Dec 28 17:30:01 web01 CRON[2590]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 17:30:02 web01 CRON[2590]: pam_unix(cron:session): session closed for user root
+Dec 28 17:45:01 web01 CRON[2619]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 17:45:02 web01 CRON[2619]: pam_unix(cron:session): session closed for user root
+Dec 28 18:00:01 web01 CRON[2655]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 18:00:02 web01 CRON[2655]: pam_unix(cron:session): session closed for user root
+Dec 28 18:15:01 web01 CRON[2673]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 18:15:02 web01 CRON[2673]: pam_unix(cron:session): session closed for user root
+Dec 28 18:30:01 web01 CRON[2695]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 18:30:02 web01 CRON[2695]: pam_unix(cron:session): session closed for user root
+Dec 28 18:45:01 web01 CRON[2696]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 18:45:02 web01 CRON[2696]: pam_unix(cron:session): session closed for user root
+Dec 28 19:00:01 web01 CRON[2715]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 19:00:02 web01 CRON[2715]: pam_unix(cron:session): session closed for user root
+Dec 28 19:15:01 web01 CRON[2722]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 19:15:02 web01 CRON[2722]: pam_unix(cron:session): session closed for user root
+Dec 28 19:30:01 web01 CRON[2725]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 19:30:02 web01 CRON[2725]: pam_unix(cron:session): session closed for user root
+Dec 28 19:45:01 web01 CRON[2761]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 19:45:02 web01 CRON[2761]: pam_unix(cron:session): session closed for user root
+Dec 28 20:00:01 web01 CRON[2776]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 20:00:02 web01 CRON[2776]: pam_unix(cron:session): session closed for user root
+Dec 28 20:15:01 web01 CRON[2793]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 20:15:02 web01 CRON[2793]: pam_unix(cron:session): session closed for user root
+Dec 28 20:30:01 web01 CRON[2819]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 20:30:02 web01 CRON[2819]: pam_unix(cron:session): session closed for user root
+Dec 28 20:45:01 web01 CRON[2845]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 20:45:02 web01 CRON[2845]: pam_unix(cron:session): session closed for user root
+Dec 28 21:00:01 web01 CRON[2863]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 21:00:02 web01 CRON[2863]: pam_unix(cron:session): session closed for user root
+Dec 28 21:15:01 web01 CRON[2879]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 21:15:02 web01 CRON[2879]: pam_unix(cron:session): session closed for user root
+Dec 28 21:30:01 web01 CRON[2910]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 21:30:02 web01 CRON[2910]: pam_unix(cron:session): session closed for user root
+Dec 28 21:45:01 web01 CRON[2923]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 21:45:02 web01 CRON[2923]: pam_unix(cron:session): session closed for user root
+Dec 28 22:00:01 web01 CRON[2938]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 22:00:02 web01 CRON[2938]: pam_unix(cron:session): session closed for user root
+Dec 28 22:15:01 web01 CRON[2945]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 22:15:02 web01 CRON[2945]: pam_unix(cron:session): session closed for user root
+Dec 28 22:30:01 web01 CRON[2947]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 22:30:02 web01 CRON[2947]: pam_unix(cron:session): session closed for user root
+Dec 28 22:45:01 web01 CRON[2953]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 22:45:02 web01 CRON[2953]: pam_unix(cron:session): session closed for user root
+Dec 28 23:00:01 web01 CRON[2974]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 23:00:02 web01 CRON[2974]: pam_unix(cron:session): session closed for user root
+Dec 28 23:15:01 web01 CRON[3004]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 23:15:02 web01 CRON[3004]: pam_unix(cron:session): session closed for user root
+Dec 28 23:30:01 web01 CRON[3030]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 23:30:02 web01 CRON[3030]: pam_unix(cron:session): session closed for user root
+Dec 28 23:45:01 web01 CRON[3056]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 28 23:45:02 web01 CRON[3056]: pam_unix(cron:session): session closed for user root
+Dec 29 00:00:01 web01 CRON[3088]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 00:00:02 web01 CRON[3088]: pam_unix(cron:session): session closed for user root
+Dec 29 00:15:01 web01 CRON[3097]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 00:15:02 web01 CRON[3097]: pam_unix(cron:session): session closed for user root
+Dec 29 00:30:01 web01 CRON[3134]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 00:30:02 web01 CRON[3134]: pam_unix(cron:session): session closed for user root
+Dec 29 00:45:01 web01 CRON[3154]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 00:45:02 web01 CRON[3154]: pam_unix(cron:session): session closed for user root
+Dec 29 01:00:01 web01 CRON[3168]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 01:00:02 web01 CRON[3168]: pam_unix(cron:session): session closed for user root
+Dec 29 01:15:01 web01 CRON[3202]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 01:15:02 web01 CRON[3202]: pam_unix(cron:session): session closed for user root
+Dec 29 01:30:01 web01 CRON[3230]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 01:30:02 web01 CRON[3230]: pam_unix(cron:session): session closed for user root
+Dec 29 01:45:01 web01 CRON[3237]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 01:45:02 web01 CRON[3237]: pam_unix(cron:session): session closed for user root
+Dec 29 02:00:01 web01 CRON[3241]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 02:00:02 web01 CRON[3241]: pam_unix(cron:session): session closed for user root
+Dec 29 02:15:01 web01 CRON[3262]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 02:15:02 web01 CRON[3262]: pam_unix(cron:session): session closed for user root
+Dec 29 02:30:01 web01 CRON[3298]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 02:30:02 web01 CRON[3298]: pam_unix(cron:session): session closed for user root
+Dec 29 02:45:01 web01 CRON[3338]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 02:45:02 web01 CRON[3338]: pam_unix(cron:session): session closed for user root
+Dec 29 03:00:01 web01 CRON[3343]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 03:00:02 web01 CRON[3343]: pam_unix(cron:session): session closed for user root
+Dec 29 03:15:01 web01 CRON[3356]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 03:15:02 web01 CRON[3356]: pam_unix(cron:session): session closed for user root
+Dec 29 03:30:01 web01 CRON[3357]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 03:30:02 web01 CRON[3357]: pam_unix(cron:session): session closed for user root
+Dec 29 03:45:01 web01 CRON[3396]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 03:45:02 web01 CRON[3396]: pam_unix(cron:session): session closed for user root
+Dec 29 03:54:25 web01 sshd[9057]: Invalid user pi from 198.18.107.14 port 49904
+Dec 29 03:54:27 web01 sshd[9057]: Failed password for invalid user pi from 198.18.107.14 port 49904 ssh2
+Dec 29 03:54:28 web01 sshd[9057]: Connection closed by invalid user pi 198.18.107.14 port 49904 [preauth]
+Dec 29 04:00:01 web01 CRON[3434]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 04:00:02 web01 CRON[3434]: pam_unix(cron:session): session closed for user root
+Dec 29 04:14:51 web01 sshd[9145]: Invalid user test from 198.18.109.195 port 31772
+Dec 29 04:14:53 web01 sshd[9145]: Failed password for invalid user test from 198.18.109.195 port 31772 ssh2
+Dec 29 04:14:54 web01 sshd[9145]: Connection closed by invalid user test 198.18.109.195 port 31772 [preauth]
+Dec 29 04:15:01 web01 CRON[3465]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 04:15:02 web01 CRON[3465]: pam_unix(cron:session): session closed for user root
+Dec 29 04:30:01 web01 CRON[3473]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 04:30:02 web01 CRON[3473]: pam_unix(cron:session): session closed for user root
+Dec 29 04:45:01 web01 CRON[3504]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 04:45:02 web01 CRON[3504]: pam_unix(cron:session): session closed for user root
+Dec 29 05:00:01 web01 CRON[3524]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 05:00:02 web01 CRON[3524]: pam_unix(cron:session): session closed for user root
+Dec 29 05:15:01 web01 CRON[3564]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 05:15:02 web01 CRON[3564]: pam_unix(cron:session): session closed for user root
+Dec 29 05:30:01 web01 CRON[3582]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 05:30:02 web01 CRON[3582]: pam_unix(cron:session): session closed for user root
+Dec 29 05:45:01 web01 CRON[3605]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 05:45:02 web01 CRON[3605]: pam_unix(cron:session): session closed for user root
+Dec 29 06:00:01 web01 CRON[3612]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 06:00:02 web01 CRON[3612]: pam_unix(cron:session): session closed for user root
+Dec 29 06:15:01 web01 CRON[3634]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 06:15:02 web01 CRON[3634]: pam_unix(cron:session): session closed for user root
+Dec 29 06:30:01 web01 CRON[3660]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 06:30:02 web01 CRON[3660]: pam_unix(cron:session): session closed for user root
+Dec 29 06:44:22 web01 sshd[9124]: Invalid user git from 198.18.239.183 port 41150
+Dec 29 06:44:24 web01 sshd[9124]: Failed password for invalid user git from 198.18.239.183 port 41150 ssh2
+Dec 29 06:44:25 web01 sshd[9124]: Connection closed by invalid user git 198.18.239.183 port 41150 [preauth]
+Dec 29 06:45:01 web01 CRON[3682]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 06:45:02 web01 CRON[3682]: pam_unix(cron:session): session closed for user root
+Dec 29 07:00:01 web01 CRON[3694]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 07:00:02 web01 CRON[3694]: pam_unix(cron:session): session closed for user root
+Dec 29 07:15:01 web01 CRON[3697]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 07:15:02 web01 CRON[3697]: pam_unix(cron:session): session closed for user root
+Dec 29 07:30:01 web01 CRON[3698]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 07:30:02 web01 CRON[3698]: pam_unix(cron:session): session closed for user root
+Dec 29 07:45:01 web01 CRON[3717]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 07:45:02 web01 CRON[3717]: pam_unix(cron:session): session closed for user root
+Dec 29 08:00:01 web01 CRON[3725]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 08:00:02 web01 CRON[3725]: pam_unix(cron:session): session closed for user root
+Dec 29 08:15:01 web01 CRON[3758]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 08:15:02 web01 CRON[3758]: pam_unix(cron:session): session closed for user root
+Dec 29 08:30:01 web01 CRON[3771]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 08:30:02 web01 CRON[3771]: pam_unix(cron:session): session closed for user root
+Dec 29 08:45:01 web01 CRON[3775]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 08:45:02 web01 CRON[3775]: pam_unix(cron:session): session closed for user root
+Dec 29 09:00:01 web01 CRON[3801]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 09:00:02 web01 CRON[3801]: pam_unix(cron:session): session closed for user root
+Dec 29 09:15:01 web01 CRON[3804]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 09:15:02 web01 CRON[3804]: pam_unix(cron:session): session closed for user root
+Dec 29 09:16:39 web01 sshd[9446]: Accepted publickey for alice from 198.51.100.7 port 52360 ssh2: ED25519 SHA256:Zk3q9Xc4m2VwqL1sTn8fYp0rHb6uJd5aEe7gKi2oQx4
+Dec 29 09:16:39 web01 sshd[9446]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Dec 29 09:16:39 web01 systemd-logind[612]: New session 11 of user alice.
+Dec 29 09:21:17 web01 sudo:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+Dec 29 09:21:17 web01 sudo[9453]: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1000)
+Dec 29 09:21:18 web01 sudo[9453]: pam_unix(sudo:session): session closed for user root
+Dec 29 09:21:57 web01 sudo:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt upgrade -y
+Dec 29 09:21:57 web01 sudo[9478]: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1000)
+Dec 29 09:21:58 web01 sudo[9478]: pam_unix(sudo:session): session closed for user root
+Dec 29 09:30:01 web01 CRON[3835]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 09:30:02 web01 CRON[3835]: pam_unix(cron:session): session closed for user root
+Dec 29 09:33:25 web01 sshd[9501]: Received disconnect from 198.51.100.7 port 52360:11: disconnected by user
+Dec 29 09:33:25 web01 sshd[9501]: Disconnected from user alice 198.51.100.7 port 52360
+Dec 29 09:33:25 web01 sshd[9501]: pam_unix(sshd:session): session closed for user alice
+Dec 29 09:33:25 web01 systemd-logind[612]: Session 11 logged out. Waiting for processes to exit.
+Dec 29 09:33:25 web01 systemd-logind[612]: Removed session 11.
+Dec 29 09:45:01 web01 CRON[3875]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 09:45:02 web01 CRON[3875]: pam_unix(cron:session): session closed for user root
+Dec 29 10:00:01 web01 CRON[3894]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 10:00:02 web01 CRON[3894]: pam_unix(cron:session): session closed for user root
+Dec 29 10:15:01 web01 CRON[3909]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 10:15:02 web01 CRON[3909]: pam_unix(cron:session): session closed for user root
+Dec 29 10:30:01 web01 CRON[3925]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 10:30:02 web01 CRON[3925]: pam_unix(cron:session): session closed for user root
+Dec 29 10:45:01 web01 CRON[3934]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 10:45:02 web01 CRON[3934]: pam_unix(cron:session): session closed for user root
+Dec 29 11:00:01 web01 CRON[3961]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 11:00:02 web01 CRON[3961]: pam_unix(cron:session): session closed for user root
+Dec 29 11:15:01 web01 CRON[3980]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 11:15:02 web01 CRON[3980]: pam_unix(cron:session): session closed for user root
+Dec 29 11:30:01 web01 CRON[3988]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 11:30:02 web01 CRON[3988]: pam_unix(cron:session): session closed for user root
+Dec 29 11:45:01 web01 CRON[3995]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 11:45:02 web01 CRON[3995]: pam_unix(cron:session): session closed for user root
+Dec 29 12:00:01 web01 CRON[4025]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 12:00:02 web01 CRON[4025]: pam_unix(cron:session): session closed for user root
+Dec 29 12:15:01 web01 CRON[4033]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 12:15:02 web01 CRON[4033]: pam_unix(cron:session): session closed for user root
+Dec 29 12:30:01 web01 CRON[4065]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 12:30:02 web01 CRON[4065]: pam_unix(cron:session): session closed for user root
+Dec 29 12:45:01 web01 CRON[4098]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 12:45:02 web01 CRON[4098]: pam_unix(cron:session): session closed for user root
+Dec 29 13:00:01 web01 CRON[4109]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 13:00:02 web01 CRON[4109]: pam_unix(cron:session): session closed for user root
+Dec 29 13:15:01 web01 CRON[4144]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 13:15:02 web01 CRON[4144]: pam_unix(cron:session): session closed for user root
+Dec 29 13:30:01 web01 CRON[4155]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 13:30:02 web01 CRON[4155]: pam_unix(cron:session): session closed for user root
+Dec 29 13:45:01 web01 CRON[4171]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 13:45:02 web01 CRON[4171]: pam_unix(cron:session): session closed for user root
+Dec 29 14:00:01 web01 CRON[4198]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 14:00:02 web01 CRON[4198]: pam_unix(cron:session): session closed for user root
+Dec 29 14:09:31 web01 sshd[9021]: Invalid user pi from 198.18.223.33 port 48007
+Dec 29 14:09:33 web01 sshd[9021]: Failed password for invalid user pi from 198.18.223.33 port 48007 ssh2
+Dec 29 14:09:34 web01 sshd[9021]: Connection closed by invalid user pi 198.18.223.33 port 48007 [preauth]
+Dec 29 14:15:01 web01 CRON[4231]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 14:15:02 web01 CRON[4231]: pam_unix(cron:session): session closed for user root
+Dec 29 14:30:01 web01 CRON[4250]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 14:30:02 web01 CRON[4250]: pam_unix(cron:session): session closed for user root
+Dec 29 14:45:01 web01 CRON[4251]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 14:45:02 web01 CRON[4251]: pam_unix(cron:session): session closed for user root
+Dec 29 15:00:01 web01 CRON[4264]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 15:00:02 web01 CRON[4264]: pam_unix(cron:session): session closed for user root
+Dec 29 15:15:01 web01 CRON[4302]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 15:15:02 web01 CRON[4302]: pam_unix(cron:session): session closed for user root
+Dec 29 15:30:01 web01 CRON[4318]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 15:30:02 web01 CRON[4318]: pam_unix(cron:session): session closed for user root
+Dec 29 15:45:01 web01 CRON[4325]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 15:45:02 web01 CRON[4325]: pam_unix(cron:session): session closed for user root
+Dec 29 16:00:01 web01 CRON[4354]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 16:00:02 web01 CRON[4354]: pam_unix(cron:session): session closed for user root
+Dec 29 16:15:01 web01 CRON[4369]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 16:15:02 web01 CRON[4369]: pam_unix(cron:session): session closed for user root
+Dec 29 16:30:01 web01 CRON[4400]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 16:30:02 web01 CRON[4400]: pam_unix(cron:session): session closed for user root
+Dec 29 16:45:01 web01 CRON[4437]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 16:45:02 web01 CRON[4437]: pam_unix(cron:session): session closed for user root
+Dec 29 17:00:01 web01 CRON[4452]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 17:00:02 web01 CRON[4452]: pam_unix(cron:session): session closed for user root
+Dec 29 17:15:01 web01 CRON[4470]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 17:15:02 web01 CRON[4470]: pam_unix(cron:session): session closed for user root
+Dec 29 17:30:01 web01 CRON[4504]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 17:30:02 web01 CRON[4504]: pam_unix(cron:session): session closed for user root
+Dec 29 17:45:01 web01 CRON[4505]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 17:45:02 web01 CRON[4505]: pam_unix(cron:session): session closed for user root
+Dec 29 18:00:01 web01 CRON[4522]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 18:00:02 web01 CRON[4522]: pam_unix(cron:session): session closed for user root
+Dec 29 18:15:01 web01 CRON[4524]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 18:15:02 web01 CRON[4524]: pam_unix(cron:session): session closed for user root
+Dec 29 18:30:01 web01 CRON[4532]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 18:30:02 web01 CRON[4532]: pam_unix(cron:session): session closed for user root
+Dec 29 18:45:01 web01 CRON[4552]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 18:45:02 web01 CRON[4552]: pam_unix(cron:session): session closed for user root
+Dec 29 19:00:01 web01 CRON[4568]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 19:00:02 web01 CRON[4568]: pam_unix(cron:session): session closed for user root
+Dec 29 19:15:01 web01 CRON[4607]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 19:15:02 web01 CRON[4607]: pam_unix(cron:session): session closed for user root
+Dec 29 19:30:01 web01 CRON[4631]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 19:30:02 web01 CRON[4631]: pam_unix(cron:session): session closed for user root
+Dec 29 19:45:01 web01 CRON[4655]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 19:45:02 web01 CRON[4655]: pam_unix(cron:session): session closed for user root
+Dec 29 20:00:01 web01 CRON[4669]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 20:00:02 web01 CRON[4669]: pam_unix(cron:session): session closed for user root
+Dec 29 20:15:01 web01 CRON[4678]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 20:15:02 web01 CRON[4678]: pam_unix(cron:session): session closed for user root
+Dec 29 20:26:46 web01 sshd[9086]: Invalid user pi from 198.18.123.134 port 56186
+Dec 29 20:26:48 web01 sshd[9086]: Failed password for invalid user pi from 198.18.123.134 port 56186 ssh2
+Dec 29 20:26:49 web01 sshd[9086]: Connection closed by invalid user pi 198.18.123.134 port 56186 [preauth]
+Dec 29 20:30:01 web01 CRON[4680]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 20:30:02 web01 CRON[4680]: pam_unix(cron:session): session closed for user root
+Dec 29 20:44:34 web01 sshd[9141]: Invalid user admin from 198.18.88.37 port 56130
+Dec 29 20:44:36 web01 sshd[9141]: Failed password for invalid user admin from 198.18.88.37 port 56130 ssh2
+Dec 29 20:44:37 web01 sshd[9141]: Connection closed by invalid user admin 198.18.88.37 port 56130 [preauth]
+Dec 29 20:45:01 web01 CRON[4693]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 20:45:02 web01 CRON[4693]: pam_unix(cron:session): session closed for user root
+Dec 29 21:00:01 web01 CRON[4697]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 21:00:02 web01 CRON[4697]: pam_unix(cron:session): session closed for user root
+Dec 29 21:15:01 web01 CRON[4735]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 21:15:02 web01 CRON[4735]: pam_unix(cron:session): session closed for user root
+Dec 29 21:30:01 web01 CRON[4739]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 21:30:02 web01 CRON[4739]: pam_unix(cron:session): session closed for user root
+Dec 29 21:45:01 web01 CRON[4742]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 21:45:02 web01 CRON[4742]: pam_unix(cron:session): session closed for user root
+Dec 29 22:00:01 web01 CRON[4761]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 22:00:02 web01 CRON[4761]: pam_unix(cron:session): session closed for user root
+Dec 29 22:15:01 web01 CRON[4786]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 22:15:02 web01 CRON[4786]: pam_unix(cron:session): session closed for user root
+Dec 29 22:30:01 web01 CRON[4803]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 22:30:02 web01 CRON[4803]: pam_unix(cron:session): session closed for user root
+Dec 29 22:45:01 web01 CRON[4833]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 22:45:02 web01 CRON[4833]: pam_unix(cron:session): session closed for user root
+Dec 29 23:00:01 web01 CRON[4870]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 23:00:02 web01 CRON[4870]: pam_unix(cron:session): session closed for user root
+Dec 29 23:15:01 web01 CRON[4884]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 23:15:02 web01 CRON[4884]: pam_unix(cron:session): session closed for user root
+Dec 29 23:30:01 web01 CRON[4904]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 23:30:02 web01 CRON[4904]: pam_unix(cron:session): session closed for user root
+Dec 29 23:45:01 web01 CRON[4907]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 29 23:45:02 web01 CRON[4907]: pam_unix(cron:session): session closed for user root
+Dec 30 00:00:01 web01 CRON[4943]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 00:00:02 web01 CRON[4943]: pam_unix(cron:session): session closed for user root
+Dec 30 00:15:01 web01 CRON[4983]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 00:15:02 web01 CRON[4983]: pam_unix(cron:session): session closed for user root
+Dec 30 00:30:01 web01 CRON[5015]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 00:30:02 web01 CRON[5015]: pam_unix(cron:session): session closed for user root
+Dec 30 00:45:01 web01 CRON[5027]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 00:45:02 web01 CRON[5027]: pam_unix(cron:session): session closed for user root
+Dec 30 01:00:01 web01 CRON[5064]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 01:00:02 web01 CRON[5064]: pam_unix(cron:session): session closed for user root
+Dec 30 01:15:01 web01 CRON[5078]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 01:15:02 web01 CRON[5078]: pam_unix(cron:session): session closed for user root
+Dec 30 01:30:01 web01 CRON[5114]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 01:30:02 web01 CRON[5114]: pam_unix(cron:session): session closed for user root
+Dec 30 01:45:01 web01 CRON[5131]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 01:45:02 web01 CRON[5131]: pam_unix(cron:session): session closed for user root
+Dec 30 02:00:01 web01 CRON[5137]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 02:00:02 web01 CRON[5137]: pam_unix(cron:session): session closed for user root
+Dec 30 02:15:01 web01 CRON[5146]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 02:15:02 web01 CRON[5146]: pam_unix(cron:session): session closed for user root
+Dec 30 02:30:01 web01 CRON[5183]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 02:30:02 web01 CRON[5183]: pam_unix(cron:session): session closed for user root
+Dec 30 02:45:01 web01 CRON[5205]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 02:45:02 web01 CRON[5205]: pam_unix(cron:session): session closed for user root
+Dec 30 03:00:01 web01 CRON[5243]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 03:00:02 web01 CRON[5243]: pam_unix(cron:session): session closed for user root
+Dec 30 03:13:25 web01 sshd[9248]: Invalid user pi from 198.18.70.108 port 59542
+Dec 30 03:13:27 web01 sshd[9248]: Failed password for invalid user pi from 198.18.70.108 port 59542 ssh2
+Dec 30 03:13:28 web01 sshd[9248]: Connection closed by invalid user pi 198.18.70.108 port 59542 [preauth]
+Dec 30 03:15:01 web01 CRON[5267]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 03:15:02 web01 CRON[5267]: pam_unix(cron:session): session closed for user root
+Dec 30 03:30:01 web01 CRON[5306]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 03:30:02 web01 CRON[5306]: pam_unix(cron:session): session closed for user root
+Dec 30 03:45:01 web01 CRON[5321]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 03:45:02 web01 CRON[5321]: pam_unix(cron:session): session closed for user root
+Dec 30 04:00:01 web01 CRON[5325]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 04:00:02 web01 CRON[5325]: pam_unix(cron:session): session closed for user root
+Dec 30 04:15:01 web01 CRON[5355]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 04:15:02 web01 CRON[5355]: pam_unix(cron:session): session closed for user root
+Dec 30 04:30:01 web01 CRON[5380]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 04:30:02 web01 CRON[5380]: pam_unix(cron:session): session closed for user root
+Dec 30 04:45:01 web01 CRON[5418]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 04:45:02 web01 CRON[5418]: pam_unix(cron:session): session closed for user root
+Dec 30 05:00:01 web01 CRON[5427]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 05:00:02 web01 CRON[5427]: pam_unix(cron:session): session closed for user root
+Dec 30 05:03:48 web01 sshd[9195]: Invalid user user from 198.18.128.8 port 35941
+Dec 30 05:03:50 web01 sshd[9195]: Failed password for invalid user user from 198.18.128.8 port 35941 ssh2
+Dec 30 05:03:51 web01 sshd[9195]: Connection closed by invalid user user 198.18.128.8 port 35941 [preauth]
+Dec 30 05:15:01 web01 CRON[5438]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 05:15:02 web01 CRON[5438]: pam_unix(cron:session): session closed for user root
+Dec 30 05:30:01 web01 CRON[5443]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 05:30:02 web01 CRON[5443]: pam_unix(cron:session): session closed for user root
+Dec 30 05:45:01 web01 CRON[5449]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 05:45:02 web01 CRON[5449]: pam_unix(cron:session): session closed for user root
+Dec 30 06:00:01 web01 CRON[5451]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 06:00:02 web01 CRON[5451]: pam_unix(cron:session): session closed for user root
+Dec 30 06:15:01 web01 CRON[5471]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 06:15:02 web01 CRON[5471]: pam_unix(cron:session): session closed for user root
+Dec 30 06:30:01 web01 CRON[5481]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 06:30:02 web01 CRON[5481]: pam_unix(cron:session): session closed for user root
+Dec 30 06:45:01 web01 CRON[5500]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 06:45:02 web01 CRON[5500]: pam_unix(cron:session): session closed for user root
+Dec 30 07:00:01 web01 CRON[5504]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 07:00:02 web01 CRON[5504]: pam_unix(cron:session): session closed for user root
+Dec 30 07:15:01 web01 CRON[5533]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 07:15:02 web01 CRON[5533]: pam_unix(cron:session): session closed for user root
+Dec 30 07:30:01 web01 CRON[5534]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 07:30:02 web01 CRON[5534]: pam_unix(cron:session): session closed for user root
+Dec 30 07:45:01 web01 CRON[5573]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 07:45:02 web01 CRON[5573]: pam_unix(cron:session): session closed for user root
+Dec 30 08:00:01 web01 CRON[5577]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 08:00:02 web01 CRON[5577]: pam_unix(cron:session): session closed for user root
+Dec 30 08:13:27 web01 sshd[9180]: Invalid user pi from 198.18.124.130 port 53777
+Dec 30 08:13:29 web01 sshd[9180]: Failed password for invalid user pi from 198.18.124.130 port 53777 ssh2
+Dec 30 08:13:30 web01 sshd[9180]: Connection closed by invalid user pi 198.18.124.130 port 53777 [preauth]
+Dec 30 08:15:01 web01 CRON[5598]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 08:15:02 web01 CRON[5598]: pam_unix(cron:session): session closed for user root
+Dec 30 08:30:01 web01 CRON[5635]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 08:30:02 web01 CRON[5635]: pam_unix(cron:session): session closed for user root
+Dec 30 08:45:01 web01 CRON[5643]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 08:45:02 web01 CRON[5643]: pam_unix(cron:session): session closed for user root
+Dec 30 09:00:01 web01 CRON[5675]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 09:00:02 web01 CRON[5675]: pam_unix(cron:session): session closed for user root
+Dec 30 09:14:02 web01 sshd[9536]: Accepted publickey for alice from 198.51.100.7 port 55145 ssh2: ED25519 SHA256:Zk3q9Xc4m2VwqL1sTn8fYp0rHb6uJd5aEe7gKi2oQx4
+Dec 30 09:14:02 web01 sshd[9536]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Dec 30 09:14:02 web01 systemd-logind[612]: New session 12 of user alice.
+Dec 30 09:15:01 web01 CRON[5689]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 09:15:02 web01 CRON[5689]: pam_unix(cron:session): session closed for user root
+Dec 30 09:30:01 web01 CRON[5691]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 09:30:02 web01 CRON[5691]: pam_unix(cron:session): session closed for user root
+Dec 30 09:30:07 web01 sshd[9576]: Received disconnect from 198.51.100.7 port 55145:11: disconnected by user
+Dec 30 09:30:07 web01 sshd[9576]: Disconnected from user alice 198.51.100.7 port 55145
+Dec 30 09:30:07 web01 sshd[9576]: pam_unix(sshd:session): session closed for user alice
+Dec 30 09:30:07 web01 systemd-logind[612]: Session 12 logged out. Waiting for processes to exit.
+Dec 30 09:30:07 web01 systemd-logind[612]: Removed session 12.
+Dec 30 09:45:01 web01 CRON[5726]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 09:45:02 web01 CRON[5726]: pam_unix(cron:session): session closed for user root
+Dec 30 10:00:01 web01 CRON[5736]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 10:00:02 web01 CRON[5736]: pam_unix(cron:session): session closed for user root
+Dec 30 10:15:01 web01 CRON[5758]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 10:15:02 web01 CRON[5758]: pam_unix(cron:session): session closed for user root
+Dec 30 10:30:01 web01 CRON[5769]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 10:30:02 web01 CRON[5769]: pam_unix(cron:session): session closed for user root
+Dec 30 10:45:01 web01 CRON[5775]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 10:45:02 web01 CRON[5775]: pam_unix(cron:session): session closed for user root
+Dec 30 11:00:01 web01 CRON[5802]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 11:00:02 web01 CRON[5802]: pam_unix(cron:session): session closed for user root
+Dec 30 11:15:01 web01 CRON[5836]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 11:15:02 web01 CRON[5836]: pam_unix(cron:session): session closed for user root
+Dec 30 11:30:01 web01 CRON[5863]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 11:30:02 web01 CRON[5863]: pam_unix(cron:session): session closed for user root
+Dec 30 11:45:01 web01 CRON[5888]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 11:45:02 web01 CRON[5888]: pam_unix(cron:session): session closed for user root
+Dec 30 12:00:01 web01 CRON[5926]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 12:00:02 web01 CRON[5926]: pam_unix(cron:session): session closed for user root
+Dec 30 12:07:52 web01 sshd[9223]: Invalid user test from 198.18.105.175 port 30010
+Dec 30 12:07:54 web01 sshd[9223]: Failed password for invalid user test from 198.18.105.175 port 30010 ssh2
+Dec 30 12:07:55 web01 sshd[9223]: Connection closed by invalid user test 198.18.105.175 port 30010 [preauth]
+Dec 30 12:15:01 web01 CRON[5951]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 12:15:02 web01 CRON[5951]: pam_unix(cron:session): session closed for user root
+Dec 30 12:30:01 web01 CRON[5988]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 12:30:02 web01 CRON[5988]: pam_unix(cron:session): session closed for user root
+Dec 30 12:45:01 web01 CRON[6017]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 12:45:02 web01 CRON[6017]: pam_unix(cron:session): session closed for user root
+Dec 30 13:00:01 web01 CRON[6023]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 13:00:02 web01 CRON[6023]: pam_unix(cron:session): session closed for user root
+Dec 30 13:15:01 web01 CRON[6044]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 13:15:02 web01 CRON[6044]: pam_unix(cron:session): session closed for user root
+Dec 30 13:30:01 web01 CRON[6065]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 13:30:02 web01 CRON[6065]: pam_unix(cron:session): session closed for user root
+Dec 30 13:45:01 web01 CRON[6091]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 13:45:02 web01 CRON[6091]: pam_unix(cron:session): session closed for user root
+Dec 30 14:00:01 web01 CRON[6115]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 14:00:02 web01 CRON[6115]: pam_unix(cron:session): session closed for user root
+Dec 30 14:02:11 web01 sshd[9634]: Accepted password for deploy from 198.51.100.23 port 57991 ssh2
+Dec 30 14:02:11 web01 sshd[9634]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+Dec 30 14:02:11 web01 systemd-logind[612]: New session 20 of user deploy.
+Dec 30 14:03:21 web01 sudo:   deploy : TTY=pts/1 ; PWD=/srv/webapp ; USER=root ; COMMAND=/usr/bin/systemctl restart webapp
+Dec 30 14:03:21 web01 sudo[9661]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+Dec 30 14:03:22 web01 sudo[9661]: pam_unix(sudo:session): session closed for user root
+Dec 30 14:09:25 web01 sshd[9674]: Received disconnect from 198.51.100.23 port 57991:11: disconnected by user
+Dec 30 14:09:25 web01 sshd[9674]: Disconnected from user deploy 198.51.100.23 port 57991
+Dec 30 14:09:25 web01 sshd[9674]: pam_unix(sshd:session): session closed for user deploy
+Dec 30 14:09:25 web01 systemd-logind[612]: Session 20 logged out. Waiting for processes to exit.
+Dec 30 14:09:25 web01 systemd-logind[612]: Removed session 20.
+Dec 30 14:15:01 web01 CRON[6130]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 14:15:02 web01 CRON[6130]: pam_unix(cron:session): session closed for user root
+Dec 30 14:30:01 web01 CRON[6153]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 14:30:02 web01 CRON[6153]: pam_unix(cron:session): session closed for user root
+Dec 30 14:45:01 web01 CRON[6165]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 14:45:02 web01 CRON[6165]: pam_unix(cron:session): session closed for user root
+Dec 30 15:00:01 web01 CRON[6173]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 15:00:02 web01 CRON[6173]: pam_unix(cron:session): session closed for user root
+Dec 30 15:15:01 web01 CRON[6199]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 15:15:02 web01 CRON[6199]: pam_unix(cron:session): session closed for user root
+Dec 30 15:30:01 web01 CRON[6209]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 15:30:02 web01 CRON[6209]: pam_unix(cron:session): session closed for user root
+Dec 30 15:45:01 web01 CRON[6241]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 15:45:02 web01 CRON[6241]: pam_unix(cron:session): session closed for user root
+Dec 30 16:00:01 web01 CRON[6275]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 16:00:02 web01 CRON[6275]: pam_unix(cron:session): session closed for user root
+Dec 30 16:15:01 web01 CRON[6290]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 16:15:02 web01 CRON[6290]: pam_unix(cron:session): session closed for user root
+Dec 30 16:30:01 web01 CRON[6324]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 16:30:02 web01 CRON[6324]: pam_unix(cron:session): session closed for user root
+Dec 30 16:45:01 web01 CRON[6356]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 16:45:02 web01 CRON[6356]: pam_unix(cron:session): session closed for user root
+Dec 30 17:00:01 web01 CRON[6370]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 17:00:02 web01 CRON[6370]: pam_unix(cron:session): session closed for user root
+Dec 30 17:15:01 web01 CRON[6406]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 17:15:02 web01 CRON[6406]: pam_unix(cron:session): session closed for user root
+Dec 30 17:30:01 web01 CRON[6431]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 17:30:02 web01 CRON[6431]: pam_unix(cron:session): session closed for user root
+Dec 30 17:45:01 web01 CRON[6445]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 17:45:02 web01 CRON[6445]: pam_unix(cron:session): session closed for user root
+Dec 30 18:00:01 web01 CRON[6459]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 18:00:02 web01 CRON[6459]: pam_unix(cron:session): session closed for user root
+Dec 30 18:15:01 web01 CRON[6468]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 18:15:02 web01 CRON[6468]: pam_unix(cron:session): session closed for user root
+Dec 30 18:30:01 web01 CRON[6471]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 18:30:02 web01 CRON[6471]: pam_unix(cron:session): session closed for user root
+Dec 30 18:45:01 web01 CRON[6499]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 18:45:02 web01 CRON[6499]: pam_unix(cron:session): session closed for user root
+Dec 30 18:51:07 web01 sshd[9228]: Invalid user ubuntu from 198.18.168.88 port 42068
+Dec 30 18:51:09 web01 sshd[9228]: Failed password for invalid user ubuntu from 198.18.168.88 port 42068 ssh2
+Dec 30 18:51:10 web01 sshd[9228]: Connection closed by invalid user ubuntu 198.18.168.88 port 42068 [preauth]
+Dec 30 19:00:01 web01 CRON[6510]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 19:00:02 web01 CRON[6510]: pam_unix(cron:session): session closed for user root
+Dec 30 19:15:01 web01 CRON[6514]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 19:15:02 web01 CRON[6514]: pam_unix(cron:session): session closed for user root
+Dec 30 19:30:01 web01 CRON[6524]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 19:30:02 web01 CRON[6524]: pam_unix(cron:session): session closed for user root
+Dec 30 19:45:01 web01 CRON[6548]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 19:45:02 web01 CRON[6548]: pam_unix(cron:session): session closed for user root
+Dec 30 20:00:01 web01 CRON[6569]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 20:00:02 web01 CRON[6569]: pam_unix(cron:session): session closed for user root
+Dec 30 20:15:01 web01 CRON[6587]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 20:15:02 web01 CRON[6587]: pam_unix(cron:session): session closed for user root
+Dec 30 20:30:01 web01 CRON[6618]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 20:30:02 web01 CRON[6618]: pam_unix(cron:session): session closed for user root
+Dec 30 20:45:01 web01 CRON[6621]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 20:45:02 web01 CRON[6621]: pam_unix(cron:session): session closed for user root
+Dec 30 20:50:50 web01 sshd[9243]: Invalid user oracle from 198.18.116.187 port 31427
+Dec 30 20:50:52 web01 sshd[9243]: Failed password for invalid user oracle from 198.18.116.187 port 31427 ssh2
+Dec 30 20:50:53 web01 sshd[9243]: Connection closed by invalid user oracle 198.18.116.187 port 31427 [preauth]
+Dec 30 21:00:01 web01 CRON[6639]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 21:00:02 web01 CRON[6639]: pam_unix(cron:session): session closed for user root
+Dec 30 21:15:01 web01 CRON[6678]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 21:15:02 web01 CRON[6678]: pam_unix(cron:session): session closed for user root
+Dec 30 21:30:01 web01 CRON[6696]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 21:30:02 web01 CRON[6696]: pam_unix(cron:session): session closed for user root
+Dec 30 21:45:01 web01 CRON[6704]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 21:45:02 web01 CRON[6704]: pam_unix(cron:session): session closed for user root
+Dec 30 22:00:01 web01 CRON[6740]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 22:00:02 web01 CRON[6740]: pam_unix(cron:session): session closed for user root
+Dec 30 22:15:01 web01 CRON[6768]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 22:15:02 web01 CRON[6768]: pam_unix(cron:session): session closed for user root
+Dec 30 22:30:01 web01 CRON[6771]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 22:30:02 web01 CRON[6771]: pam_unix(cron:session): session closed for user root
+Dec 30 22:45:01 web01 CRON[6809]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 22:45:02 web01 CRON[6809]: pam_unix(cron:session): session closed for user root
+Dec 30 23:00:01 web01 CRON[6843]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 23:00:02 web01 CRON[6843]: pam_unix(cron:session): session closed for user root
+Dec 30 23:15:01 web01 CRON[6844]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 23:15:02 web01 CRON[6844]: pam_unix(cron:session): session closed for user root
+Dec 30 23:30:01 web01 CRON[6865]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 23:30:02 web01 CRON[6865]: pam_unix(cron:session): session closed for user root
+Dec 30 23:45:01 web01 CRON[6890]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 30 23:45:02 web01 CRON[6890]: pam_unix(cron:session): session closed for user root
+Dec 31 00:00:01 web01 CRON[6921]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 00:00:02 web01 CRON[6921]: pam_unix(cron:session): session closed for user root
+Dec 31 00:15:01 web01 CRON[6937]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 00:15:02 web01 CRON[6937]: pam_unix(cron:session): session closed for user root
+Dec 31 00:30:01 web01 CRON[6943]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 00:30:02 web01 CRON[6943]: pam_unix(cron:session): session closed for user root
+Dec 31 00:45:01 web01 CRON[6950]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 00:45:02 web01 CRON[6950]: pam_unix(cron:session): session closed for user root
+Dec 31 01:00:01 web01 CRON[6988]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 01:00:02 web01 CRON[6988]: pam_unix(cron:session): session closed for user root
+Dec 31 01:15:01 web01 CRON[7009]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 01:15:02 web01 CRON[7009]: pam_unix(cron:session): session closed for user root
+Dec 31 01:30:01 web01 CRON[7013]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 01:30:02 web01 CRON[7013]: pam_unix(cron:session): session closed for user root
+Dec 31 01:45:01 web01 CRON[7038]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 01:45:02 web01 CRON[7038]: pam_unix(cron:session): session closed for user root
+Dec 31 02:00:01 web01 CRON[7072]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 02:00:02 web01 CRON[7072]: pam_unix(cron:session): session closed for user root
+Dec 31 02:15:01 web01 CRON[7105]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 02:15:02 web01 CRON[7105]: pam_unix(cron:session): session closed for user root
+Dec 31 02:30:01 web01 CRON[7109]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 02:30:02 web01 CRON[7109]: pam_unix(cron:session): session closed for user root
+Dec 31 02:45:01 web01 CRON[7138]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 02:45:02 web01 CRON[7138]: pam_unix(cron:session): session closed for user root
+Dec 31 03:00:01 web01 CRON[7173]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 03:00:02 web01 CRON[7173]: pam_unix(cron:session): session closed for user root
+Dec 31 03:15:01 web01 CRON[7190]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 03:15:02 web01 CRON[7190]: pam_unix(cron:session): session closed for user root
+Dec 31 03:30:01 web01 CRON[7196]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 03:30:02 web01 CRON[7196]: pam_unix(cron:session): session closed for user root
+Dec 31 03:45:01 web01 CRON[7204]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 03:45:02 web01 CRON[7204]: pam_unix(cron:session): session closed for user root
+Dec 31 04:00:01 web01 CRON[7217]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 04:00:02 web01 CRON[7217]: pam_unix(cron:session): session closed for user root
+Dec 31 04:15:01 web01 CRON[7240]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 04:15:02 web01 CRON[7240]: pam_unix(cron:session): session closed for user root
+Dec 31 04:30:01 web01 CRON[7256]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 04:30:02 web01 CRON[7256]: pam_unix(cron:session): session closed for user root
+Dec 31 04:45:01 web01 CRON[7280]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 04:45:02 web01 CRON[7280]: pam_unix(cron:session): session closed for user root
+Dec 31 04:49:34 web01 sshd[9282]: Invalid user git from 198.18.197.20 port 43370
+Dec 31 04:49:36 web01 sshd[9282]: Failed password for invalid user git from 198.18.197.20 port 43370 ssh2
+Dec 31 04:49:37 web01 sshd[9282]: Connection closed by invalid user git 198.18.197.20 port 43370 [preauth]
+Dec 31 05:00:01 web01 CRON[7300]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 05:00:02 web01 CRON[7300]: pam_unix(cron:session): session closed for user root
+Dec 31 05:15:01 web01 CRON[7335]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 05:15:02 web01 CRON[7335]: pam_unix(cron:session): session closed for user root
+Dec 31 05:30:01 web01 CRON[7367]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 05:30:02 web01 CRON[7367]: pam_unix(cron:session): session closed for user root
+Dec 31 05:45:01 web01 CRON[7393]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 05:45:02 web01 CRON[7393]: pam_unix(cron:session): session closed for user root
+Dec 31 06:00:01 web01 CRON[7402]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 06:00:02 web01 CRON[7402]: pam_unix(cron:session): session closed for user root
+Dec 31 06:15:01 web01 CRON[7429]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 06:15:02 web01 CRON[7429]: pam_unix(cron:session): session closed for user root
+Dec 31 06:30:01 web01 CRON[7452]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 06:30:02 web01 CRON[7452]: pam_unix(cron:session): session closed for user root
+Dec 31 06:45:01 web01 CRON[7486]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 06:45:02 web01 CRON[7486]: pam_unix(cron:session): session closed for user root
+Dec 31 07:00:01 web01 CRON[7501]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 07:00:02 web01 CRON[7501]: pam_unix(cron:session): session closed for user root
+Dec 31 07:15:01 web01 CRON[7529]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 07:15:02 web01 CRON[7529]: pam_unix(cron:session): session closed for user root
+Dec 31 07:30:01 web01 CRON[7562]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 07:30:02 web01 CRON[7562]: pam_unix(cron:session): session closed for user root
+Dec 31 07:45:01 web01 CRON[7594]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 07:45:02 web01 CRON[7594]: pam_unix(cron:session): session closed for user root
+Dec 31 07:55:00 web01 sshd[9368]: Invalid user oracle from 198.18.171.230 port 58647
+Dec 31 07:55:02 web01 sshd[9368]: Failed password for invalid user oracle from 198.18.171.230 port 58647 ssh2
+Dec 31 07:55:03 web01 sshd[9368]: Connection closed by invalid user oracle 198.18.171.230 port 58647 [preauth]
+Dec 31 08:00:01 web01 CRON[7617]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 08:00:02 web01 CRON[7617]: pam_unix(cron:session): session closed for user root
+Dec 31 08:15:01 web01 CRON[7627]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 08:15:02 web01 CRON[7627]: pam_unix(cron:session): session closed for user root
+Dec 31 08:30:01 web01 CRON[7628]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 08:30:02 web01 CRON[7628]: pam_unix(cron:session): session closed for user root
+Dec 31 08:45:01 web01 CRON[7662]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 08:45:02 web01 CRON[7662]: pam_unix(cron:session): session closed for user root
+Dec 31 09:00:01 web01 CRON[7698]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 09:00:02 web01 CRON[7698]: pam_unix(cron:session): session closed for user root
+Dec 31 09:09:39 web01 sshd[9586]: Accepted publickey for alice from 198.51.100.7 port 59452 ssh2: ED25519 SHA256:Zk3q9Xc4m2VwqL1sTn8fYp0rHb6uJd5aEe7gKi2oQx4
+Dec 31 09:09:39 web01 sshd[9586]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+Dec 31 09:09:39 web01 systemd-logind[612]: New session 13 of user alice.
+Dec 31 09:15:01 web01 CRON[7699]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 09:15:02 web01 CRON[7699]: pam_unix(cron:session): session closed for user root
+Dec 31 09:28:25 web01 sshd[9626]: Received disconnect from 198.51.100.7 port 59452:11: disconnected by user
+Dec 31 09:28:25 web01 sshd[9626]: Disconnected from user alice 198.51.100.7 port 59452
+Dec 31 09:28:25 web01 sshd[9626]: pam_unix(sshd:session): session closed for user alice
+Dec 31 09:28:25 web01 systemd-logind[612]: Session 13 logged out. Waiting for processes to exit.
+Dec 31 09:28:25 web01 systemd-logind[612]: Removed session 13.
+Dec 31 09:30:01 web01 CRON[7714]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 09:30:02 web01 CRON[7714]: pam_unix(cron:session): session closed for user root
+Dec 31 09:45:01 web01 CRON[7736]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 09:45:02 web01 CRON[7736]: pam_unix(cron:session): session closed for user root
+Dec 31 09:47:07 web01 sshd[9354]: Invalid user ubuntu from 198.18.89.89 port 34139
+Dec 31 09:47:09 web01 sshd[9354]: Failed password for invalid user ubuntu from 198.18.89.89 port 34139 ssh2
+Dec 31 09:47:10 web01 sshd[9354]: Connection closed by invalid user ubuntu 198.18.89.89 port 34139 [preauth]
+Dec 31 10:00:01 web01 CRON[7747]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 10:00:02 web01 CRON[7747]: pam_unix(cron:session): session closed for user root
+Dec 31 10:15:01 web01 CRON[7750]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 10:15:02 web01 CRON[7750]: pam_unix(cron:session): session closed for user root
+Dec 31 10:30:01 web01 CRON[7778]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 10:30:02 web01 CRON[7778]: pam_unix(cron:session): session closed for user root
+Dec 31 10:45:01 web01 CRON[7790]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 10:45:02 web01 CRON[7790]: pam_unix(cron:session): session closed for user root
+Dec 31 10:45:44 web01 sshd[9302]: Invalid user test from 198.18.99.208 port 49523
+Dec 31 10:45:46 web01 sshd[9302]: Failed password for invalid user test from 198.18.99.208 port 49523 ssh2
+Dec 31 10:45:47 web01 sshd[9302]: Connection closed by invalid user test 198.18.99.208 port 49523 [preauth]
+Dec 31 11:00:01 web01 CRON[7814]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 11:00:02 web01 CRON[7814]: pam_unix(cron:session): session closed for user root
+Dec 31 11:15:01 web01 CRON[7830]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 11:15:02 web01 CRON[7830]: pam_unix(cron:session): session closed for user root
+Dec 31 11:30:01 web01 CRON[7848]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 11:30:02 web01 CRON[7848]: pam_unix(cron:session): session closed for user root
+Dec 31 11:45:01 web01 CRON[7854]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 11:45:02 web01 CRON[7854]: pam_unix(cron:session): session closed for user root
+Dec 31 12:00:01 web01 CRON[7891]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 12:00:02 web01 CRON[7891]: pam_unix(cron:session): session closed for user root
+Dec 31 12:15:01 web01 CRON[7928]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 12:15:02 web01 CRON[7928]: pam_unix(cron:session): session closed for user root
+Dec 31 12:30:01 web01 CRON[7946]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 12:30:02 web01 CRON[7946]: pam_unix(cron:session): session closed for user root
+Dec 31 12:45:01 web01 CRON[7976]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 12:45:02 web01 CRON[7976]: pam_unix(cron:session): session closed for user root
+Dec 31 13:00:01 web01 CRON[8011]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 13:00:02 web01 CRON[8011]: pam_unix(cron:session): session closed for user root
+Dec 31 13:15:01 web01 CRON[8032]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 13:15:02 web01 CRON[8032]: pam_unix(cron:session): session closed for user root
+Dec 31 13:30:01 web01 CRON[8043]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 13:30:02 web01 CRON[8043]: pam_unix(cron:session): session closed for user root
+Dec 31 13:45:01 web01 CRON[8083]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 13:45:02 web01 CRON[8083]: pam_unix(cron:session): session closed for user root
+Dec 31 14:00:01 web01 CRON[8118]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 14:00:02 web01 CRON[8118]: pam_unix(cron:session): session closed for user root
+Dec 31 14:15:01 web01 CRON[8125]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 14:15:02 web01 CRON[8125]: pam_unix(cron:session): session closed for user root
+Dec 31 14:30:01 web01 CRON[8148]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 14:30:02 web01 CRON[8148]: pam_unix(cron:session): session closed for user root
+Dec 31 14:45:01 web01 CRON[8157]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 14:45:02 web01 CRON[8157]: pam_unix(cron:session): session closed for user root
+Dec 31 15:00:01 web01 CRON[8185]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 15:00:02 web01 CRON[8185]: pam_unix(cron:session): session closed for user root
+Dec 31 15:15:01 web01 CRON[8194]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 15:15:02 web01 CRON[8194]: pam_unix(cron:session): session closed for user root
+Dec 31 15:30:01 web01 CRON[8214]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 15:30:02 web01 CRON[8214]: pam_unix(cron:session): session closed for user root
+Dec 31 15:45:01 web01 CRON[8220]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 15:45:02 web01 CRON[8220]: pam_unix(cron:session): session closed for user root
+Dec 31 16:00:01 web01 CRON[8251]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 16:00:02 web01 CRON[8251]: pam_unix(cron:session): session closed for user root
+Dec 31 16:15:01 web01 CRON[8267]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 16:15:02 web01 CRON[8267]: pam_unix(cron:session): session closed for user root
+Dec 31 16:30:01 web01 CRON[8295]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 16:30:02 web01 CRON[8295]: pam_unix(cron:session): session closed for user root
+Dec 31 16:45:01 web01 CRON[8310]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 16:45:02 web01 CRON[8310]: pam_unix(cron:session): session closed for user root
+Dec 31 17:00:01 web01 CRON[8313]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 17:00:02 web01 CRON[8313]: pam_unix(cron:session): session closed for user root
+Dec 31 17:15:01 web01 CRON[8344]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 17:15:02 web01 CRON[8344]: pam_unix(cron:session): session closed for user root
+Dec 31 17:30:01 web01 CRON[8356]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 17:30:02 web01 CRON[8356]: pam_unix(cron:session): session closed for user root
+Dec 31 17:45:01 web01 CRON[8396]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 17:45:02 web01 CRON[8396]: pam_unix(cron:session): session closed for user root
+Dec 31 18:00:01 web01 CRON[8424]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 18:00:02 web01 CRON[8424]: pam_unix(cron:session): session closed for user root
+Dec 31 18:15:01 web01 CRON[8444]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 18:15:02 web01 CRON[8444]: pam_unix(cron:session): session closed for user root
+Dec 31 18:30:01 web01 CRON[8453]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 18:30:02 web01 CRON[8453]: pam_unix(cron:session): session closed for user root
+Dec 31 18:45:01 web01 CRON[8471]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 18:45:02 web01 CRON[8471]: pam_unix(cron:session): session closed for user root
+Dec 31 19:00:01 web01 CRON[8482]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 19:00:02 web01 CRON[8482]: pam_unix(cron:session): session closed for user root
+Dec 31 19:15:01 web01 CRON[8514]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 19:15:02 web01 CRON[8514]: pam_unix(cron:session): session closed for user root
+Dec 31 19:30:01 web01 CRON[8522]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 19:30:02 web01 CRON[8522]: pam_unix(cron:session): session closed for user root
+Dec 31 19:45:01 web01 CRON[8530]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 19:45:02 web01 CRON[8530]: pam_unix(cron:session): session closed for user root
+Dec 31 20:00:01 web01 CRON[8557]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 20:00:02 web01 CRON[8557]: pam_unix(cron:session): session closed for user root
+Dec 31 20:15:01 web01 CRON[8583]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 20:15:02 web01 CRON[8583]: pam_unix(cron:session): session closed for user root
+Dec 31 20:24:14 web01 sshd[9377]: Invalid user git from 198.18.51.216 port 49139
+Dec 31 20:24:16 web01 sshd[9377]: Failed password for invalid user git from 198.18.51.216 port 49139 ssh2
+Dec 31 20:24:17 web01 sshd[9377]: Connection closed by invalid user git 198.18.51.216 port 49139 [preauth]
+Dec 31 20:30:01 web01 CRON[8613]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 20:30:02 web01 CRON[8613]: pam_unix(cron:session): session closed for user root
+Dec 31 20:34:59 web01 sshd[9314]: Invalid user test from 198.18.43.197 port 35483
+Dec 31 20:35:01 web01 sshd[9314]: Failed password for invalid user test from 198.18.43.197 port 35483 ssh2
+Dec 31 20:35:02 web01 sshd[9314]: Connection closed by invalid user test 198.18.43.197 port 35483 [preauth]
+Dec 31 20:45:01 web01 CRON[8619]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 20:45:02 web01 CRON[8619]: pam_unix(cron:session): session closed for user root
+Dec 31 21:00:01 web01 CRON[8622]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 21:00:02 web01 CRON[8622]: pam_unix(cron:session): session closed for user root
+Dec 31 21:15:01 web01 CRON[8653]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 21:15:02 web01 CRON[8653]: pam_unix(cron:session): session closed for user root
+Dec 31 21:30:01 web01 CRON[8658]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 21:30:02 web01 CRON[8658]: pam_unix(cron:session): session closed for user root
+Dec 31 21:45:01 web01 CRON[8659]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 21:45:02 web01 CRON[8659]: pam_unix(cron:session): session closed for user root
+Dec 31 22:00:01 web01 CRON[8688]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 22:00:02 web01 CRON[8688]: pam_unix(cron:session): session closed for user root
+Dec 31 22:15:01 web01 CRON[8716]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 22:15:02 web01 CRON[8716]: pam_unix(cron:session): session closed for user root
+Dec 31 22:30:01 web01 CRON[8740]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 22:30:02 web01 CRON[8740]: pam_unix(cron:session): session closed for user root
+Dec 31 22:45:01 web01 CRON[8770]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 22:45:02 web01 CRON[8770]: pam_unix(cron:session): session closed for user root
+Dec 31 23:00:01 web01 CRON[8806]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 23:00:02 web01 CRON[8806]: pam_unix(cron:session): session closed for user root
+Dec 31 23:02:10 web01 sshd[9682]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Dec 31 23:02:12 web01 sshd[9682]: Failed password for root from 203.0.113.45 port 51000 ssh2
+Dec 31 23:02:13 web01 sshd[9682]: Connection closed by authenticating user root 203.0.113.45 port 51000 [preauth]
+Dec 31 23:02:22 web01 sshd[9692]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Dec 31 23:02:24 web01 sshd[9692]: Failed password for root from 203.0.113.45 port 51007 ssh2
+Dec 31 23:02:25 web01 sshd[9692]: Connection closed by authenticating user root 203.0.113.45 port 51007 [preauth]
+Dec 31 23:02:32 web01 sshd[9708]: Invalid user admin from 203.0.113.45 port 51014
+Dec 31 23:02:34 web01 sshd[9708]: Failed password for invalid user admin from 203.0.113.45 port 51014 ssh2
+Dec 31 23:02:35 web01 sshd[9708]: Connection closed by invalid user admin 203.0.113.45 port 51014 [preauth]
+Dec 31 23:02:48 web01 sshd[9721]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Dec 31 23:02:50 web01 sshd[9721]: Failed password for root from 203.0.113.45 port 51021 ssh2
+Dec 31 23:02:51 web01 sshd[9721]: Connection closed by authenticating user root 203.0.113.45 port 51021 [preauth]
+Dec 31 23:03:00 web01 sshd[9724]: Invalid user test from 203.0.113.45 port 51028
+Dec 31 23:03:02 web01 sshd[9724]: Failed password for invalid user test from 203.0.113.45 port 51028 ssh2
+Dec 31 23:03:03 web01 sshd[9724]: Connection closed by invalid user test 203.0.113.45 port 51028 [preauth]
+Dec 31 23:03:11 web01 sshd[9741]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=deploy
+Dec 31 23:03:13 web01 sshd[9741]: Failed password for deploy from 203.0.113.45 port 51035 ssh2
+Dec 31 23:03:14 web01 sshd[9741]: Connection closed by authenticating user deploy 203.0.113.45 port 51035 [preauth]
+Dec 31 23:03:21 web01 sshd[9778]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Dec 31 23:03:23 web01 sshd[9778]: Failed password for root from 203.0.113.45 port 51042 ssh2
+Dec 31 23:03:24 web01 sshd[9778]: Connection closed by authenticating user root 203.0.113.45 port 51042 [preauth]
+Dec 31 23:03:34 web01 sshd[9804]: Invalid user ubuntu from 203.0.113.45 port 51049
+Dec 31 23:03:36 web01 sshd[9804]: Failed password for invalid user ubuntu from 203.0.113.45 port 51049 ssh2
+Dec 31 23:03:37 web01 sshd[9804]: Connection closed by invalid user ubuntu 203.0.113.45 port 51049 [preauth]
+Dec 31 23:03:45 web01 sshd[9816]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=deploy
+Dec 31 23:03:47 web01 sshd[9816]: Failed password for deploy from 203.0.113.45 port 51056 ssh2
+Dec 31 23:03:48 web01 sshd[9816]: Connection closed by authenticating user deploy 203.0.113.45 port 51056 [preauth]
+Dec 31 23:03:55 web01 sshd[9856]: Invalid user admin from 203.0.113.45 port 51063
+Dec 31 23:03:57 web01 sshd[9856]: Failed password for invalid user admin from 203.0.113.45 port 51063 ssh2
+Dec 31 23:03:58 web01 sshd[9856]: Connection closed by invalid user admin 203.0.113.45 port 51063 [preauth]
+Dec 31 23:04:11 web01 sshd[9885]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=root
+Dec 31 23:04:13 web01 sshd[9885]: Failed password for root from 203.0.113.45 port 51070 ssh2
+Dec 31 23:04:14 web01 sshd[9885]: Connection closed by authenticating user root 203.0.113.45 port 51070 [preauth]
+Dec 31 23:04:21 web01 sshd[9907]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.45  user=deploy
+Dec 31 23:04:23 web01 sshd[9907]: Failed password for deploy from 203.0.113.45 port 51077 ssh2
+Dec 31 23:04:24 web01 sshd[9907]: Connection closed by authenticating user deploy 203.0.113.45 port 51077 [preauth]
+Dec 31 23:07:12 web01 sshd[9936]: Accepted password for deploy from 203.0.113.45 port 50122 ssh2
+Dec 31 23:07:12 web01 sshd[9936]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Dec 31 23:07:12 web01 systemd-logind[612]: New session 31 of user deploy.
+Dec 31 23:10:02 web01 sudo:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=list
+Dec 31 23:10:44 web01 sudo:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+Dec 31 23:10:44 web01 sudo[9969]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+Dec 31 23:10:45 web01 sudo[9969]: pam_unix(sudo:session): session closed for user root
+Dec 31 23:13:05 web01 useradd[9990]: new group: name=sysbackup, GID=1002
+Dec 31 23:13:05 web01 useradd[9990]: new user: name=sysbackup, UID=1002, GID=1002, home=/home/sysbackup, shell=/usr/bin/fish, from=/dev/pts/1
+Dec 31 23:13:41 web01 passwd[9993]: pam_unix(passwd:chauthtok): password changed for sysbackup
+Dec 31 23:14:10 web01 usermod[10011]: add 'sysbackup' to group 'sudo'
+Dec 31 23:14:10 web01 usermod[10011]: add 'sysbackup' to shadow group 'sudo'
+Dec 31 23:15:01 web01 CRON[8810]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 23:15:02 web01 CRON[8810]: pam_unix(cron:session): session closed for user root
+Dec 31 23:16:40 web01 sshd[10043]: Received disconnect from 203.0.113.45 port 50122:11: disconnected by user
+Dec 31 23:16:40 web01 sshd[10043]: Disconnected from user deploy 203.0.113.45 port 50122
+Dec 31 23:16:40 web01 sshd[10043]: pam_unix(sshd:session): session closed for user deploy
+Dec 31 23:16:40 web01 systemd-logind[612]: Removed session 31.
+Dec 31 23:30:01 web01 CRON[8812]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 23:30:02 web01 CRON[8812]: pam_unix(cron:session): session closed for user root
+Dec 31 23:45:01 web01 CRON[8838]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Dec 31 23:45:02 web01 CRON[8838]: pam_unix(cron:session): session closed for user root
+Jan  1 00:00:01 web01 CRON[8852]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  1 00:00:02 web01 CRON[8852]: pam_unix(cron:session): session closed for user root
+Jan  1 00:05:01 web01 CRON[10080]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  1 00:05:03 web01 CRON[10080]: pam_unix(cron:session): session closed for user root
+Jan  1 00:15:01 web01 CRON[8874]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  1 00:15:02 web01 CRON[8874]: pam_unix(cron:session): session closed for user root
+Jan  1 00:30:01 web01 CRON[8877]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  1 00:30:02 web01 CRON[8877]: pam_unix(cron:session): session closed for user root
+Jan  1 00:31:15 web01 sshd[10089]: Accepted publickey for sysbackup from 192.0.2.99 port 40022 ssh2: ED25519 SHA256:pQ1wX0vB7nYt3sKc8mRe5LaF2hUj9dZo4gTi6yNb1Ws
+Jan  1 00:31:15 web01 sshd[10089]: pam_unix(sshd:session): session opened for user sysbackup(uid=1002) by (uid=0)
+Jan  1 00:31:15 web01 systemd-logind[612]: New session 33 of user sysbackup.
+Jan  1 00:33:02 web01 sudo: sysbackup : TTY=pts/2 ; PWD=/home/sysbackup ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Jan  1 00:33:02 web01 sudo[10106]: pam_unix(sudo:session): session opened for user root(uid=0) by sysbackup(uid=1000)
+Jan  1 00:33:03 web01 sudo[10106]: pam_unix(sudo:session): session closed for user root
+Jan  1 00:34:11 web01 sudo: sysbackup : TTY=pts/2 ; PWD=/home/sysbackup ; USER=root ; COMMAND=/usr/bin/shred -u /var/log/auth.log.1
+Jan  1 00:34:11 web01 sudo[10119]: pam_unix(sudo:session): session opened for user root(uid=0) by sysbackup(uid=1000)
+Jan  1 00:34:12 web01 sudo[10119]: pam_unix(sudo:session): session closed for user root

