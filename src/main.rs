@@ -132,7 +132,7 @@ struct BuildArgs {
     /// Output file (default: stdout).
     #[arg(short, long)]
     output: Option<PathBuf>,
-    /// Output format: jsonl, csv, l2tcsv, html (default: from the file name, else jsonl).
+    /// Output format: jsonl, csv, l2tcsv, html, text (default: from the file name, else jsonl).
     #[arg(short, long)]
     format: Option<Format>,
     /// Keep events at or after this time (RFC 3339 or YYYY-MM-DD, UTC).
