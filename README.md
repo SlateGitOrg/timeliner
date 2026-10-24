@@ -175,8 +175,8 @@ and the full test suite under `cargo llvm-cov --fail-under-lines 80`.
 - property tests cover every parser on arbitrary bytes and on mutated valid input (no panics), plus round-trips: utmp encode/decode, local↔UTC, CSV quoting, and year inference on chronological input
 - line coverage **98.5%** (`make cov` → `TOTAL ... 98.50%` on the fresh-clone run, 98.49% on an earlier run; the proptest inputs vary). It's measured over all `src/` files. Inline `#[cfg(test)]` modules are part of those files, so the figure includes test code. The lowest file is `error.rs` at 66.67%.
 
-Source size (`make loc`): 8,212 non-test lines in `src/` (about 1,680 of them
-are the fixture generator), 2,122 lines of inline unit tests, 605 lines of
+Source size (`make loc`): 8,254 non-test lines in `src/` (about 1,680 of them
+are the fixture generator), 2,153 lines of inline unit tests, 605 lines of
 integration tests and a 168-line default ruleset.
 
 ## Benchmarks
