@@ -55,7 +55,9 @@ impl TimeZone {
     /// A fixed offset east of UTC, in seconds (|offset| < 26h).
     pub fn fixed(offset_secs: i32) -> Result<Self> {
         if offset_secs.abs() >= 26 * 3600 {
-            return Err(Error::TimeZone(format!("offset {offset_secs}s out of range")));
+            return Err(Error::TimeZone(format!(
+                "offset {offset_secs}s out of range"
+            )));
         }
         let sign = if offset_secs < 0 { '-' } else { '+' };
         let a = offset_secs.unsigned_abs();
@@ -96,11 +98,7 @@ impl TimeZone {
             });
         }
         let rel = Path::new(spec);
-        if spec.is_empty()
-            || !rel
-                .components()
-                .all(|c| matches!(c, Component::Normal(_)))
-        {
+        if spec.is_empty() || !rel.components().all(|c| matches!(c, Component::Normal(_))) {
             return Err(Error::TimeZone(format!("invalid time zone `{spec}`")));
         }
         let path = zoneinfo_dir.join(rel);
@@ -198,7 +196,10 @@ pub fn parse_fixed_offset(s: &str) -> Option<i32> {
     }
     let (h, m) = match digits.len() {
         2 => (digits.parse::<i32>().ok()?, 0),
-        4 => (digits[..2].parse::<i32>().ok()?, digits[2..].parse::<i32>().ok()?),
+        4 => (
+            digits[..2].parse::<i32>().ok()?,
+            digits[2..].parse::<i32>().ok()?,
+        ),
         _ => return None,
     };
     if h > 25 || m > 59 {
@@ -256,8 +257,14 @@ mod tests {
     fn dst_overlap_and_gap() {
         let tz = TimeZone::parse("EST5EDT,M3.2.0,M11.1.0", Path::new(".")).unwrap();
         // Normal winter and summer times.
-        assert_eq!(tz.local_to_utc(local(2024, 1, 5, 12, 0)).utc, utc(2024, 1, 5, 17, 0));
-        assert_eq!(tz.local_to_utc(local(2024, 7, 5, 12, 0)).utc, utc(2024, 7, 5, 16, 0));
+        assert_eq!(
+            tz.local_to_utc(local(2024, 1, 5, 12, 0)).utc,
+            utc(2024, 1, 5, 17, 0)
+        );
+        assert_eq!(
+            tz.local_to_utc(local(2024, 7, 5, 12, 0)).utc,
+            utc(2024, 7, 5, 16, 0)
+        );
         // 2024-11-03 01:30 happens twice: EDT (05:30Z) then EST (06:30Z).
         let amb = tz.local_to_utc(local(2024, 11, 3, 1, 30));
         assert!(amb.ambiguous);

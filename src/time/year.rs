@@ -171,7 +171,10 @@ mod tests {
     fn leap_day_constrains_not_after_anchor() {
         // Feb 29 exists only in 2024 within the search window.
         let s = [st(2, 29)];
-        assert_eq!(infer_years(&s, YearAnchor::NotAfter(at(2027, 5, 1))), vec![2024]);
+        assert_eq!(
+            infer_years(&s, YearAnchor::NotAfter(at(2027, 5, 1))),
+            vec![2024]
+        );
         assert!(st(2, 29).with_year(2025).is_none());
     }
 
@@ -187,7 +190,10 @@ mod tests {
     #[test]
     fn forward_gap_without_rollover_is_same_year() {
         let s = [st(1, 5), st(12, 5)];
-        assert_eq!(infer_years(&s, YearAnchor::Explicit(2024)), vec![2024, 2024]);
+        assert_eq!(
+            infer_years(&s, YearAnchor::Explicit(2024)),
+            vec![2024, 2024]
+        );
     }
 
     #[test]

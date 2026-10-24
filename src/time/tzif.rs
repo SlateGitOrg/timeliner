@@ -81,7 +81,11 @@ fn read_header(r: &mut Reader<'_>) -> Result<Header> {
         b'2' => 2,
         b'3' => 3,
         b'4' => 4,
-        v => return Err(Error::TimeZone(format!("TZif: unknown version byte {v:#x}"))),
+        v => {
+            return Err(Error::TimeZone(format!(
+                "TZif: unknown version byte {v:#x}"
+            )));
+        }
     };
     r.take(15)?;
     let mut counts = [0usize; 6];
@@ -133,10 +137,12 @@ impl TzifZone {
         if (h.isstdcnt != 0 && h.isstdcnt != h.typecnt)
             || (h.isutcnt != 0 && h.isutcnt != h.typecnt)
         {
-            return Err(Error::TimeZone("TZif: inconsistent indicator counts".into()));
+            return Err(Error::TimeZone(
+                "TZif: inconsistent indicator counts".into(),
+            ));
         }
-        let need =
-            block_len(&h, time_size).ok_or_else(|| Error::TimeZone("TZif: count overflow".into()))?;
+        let need = block_len(&h, time_size)
+            .ok_or_else(|| Error::TimeZone("TZif: count overflow".into()))?;
         if need > data.len().saturating_sub(r.pos) {
             return Err(Error::TimeZone("TZif: truncated data block".into()));
         }
@@ -173,7 +179,9 @@ impl TzifZone {
             .into_iter()
             .map(|(utoff, is_dst, idx)| {
                 if idx >= chars.len().max(1) && !chars.is_empty() {
-                    return Err(Error::TimeZone("TZif: abbreviation index out of range".into()));
+                    return Err(Error::TimeZone(
+                        "TZif: abbreviation index out of range".into(),
+                    ));
                 }
                 let abbr = chars
                     .get(idx..)
@@ -246,7 +254,9 @@ fn parse_footer(rest: &[u8]) -> Result<Option<PosixTz>> {
         return Ok(None);
     }
     if rest[0] != b'\n' {
-        return Err(Error::TimeZone("TZif: footer does not start with newline".into()));
+        return Err(Error::TimeZone(
+            "TZif: footer does not start with newline".into(),
+        ));
     }
     let body = &rest[1..];
     let end = body

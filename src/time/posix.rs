@@ -104,7 +104,9 @@ impl<'a> Cursor<'a> {
             let start = self.pos;
             while let Some(c) = self.peek() {
                 if c == b'>' {
-                    let name = std::str::from_utf8(&self.s[start..self.pos]).ok()?.to_string();
+                    let name = std::str::from_utf8(&self.s[start..self.pos])
+                        .ok()?
+                        .to_string();
                     self.pos += 1;
                     return (name.len() >= 3
                         && name
@@ -187,11 +189,7 @@ impl<'a> Cursor<'a> {
             }
             DayRule::ZeroBased(n as u16)
         };
-        let time = if self.eat(b'/') {
-            self.hms(167)?
-        } else {
-            7200
-        };
+        let time = if self.eat(b'/') { self.hms(167)? } else { 7200 };
         Some(TransitionRule { day, time })
     }
 }
@@ -358,7 +356,9 @@ mod tests {
     use chrono::{TimeZone, Utc};
 
     fn ts(y: i32, mo: u32, d: u32, h: u32, mi: u32) -> i64 {
-        Utc.with_ymd_and_hms(y, mo, d, h, mi, 0).unwrap().timestamp()
+        Utc.with_ymd_and_hms(y, mo, d, h, mi, 0)
+            .unwrap()
+            .timestamp()
     }
 
     #[test]
@@ -424,8 +424,18 @@ mod tests {
     #[test]
     fn rejects_garbage() {
         for bad in [
-            "", "E5", "EST", "EST5EDT,M3.2.0", "EST5EDT,M13.1.0,M1.1.0", "EST5x", "<AB>5",
-            "EST25", "EST5EDT,J0,J1", "EST5EDT,M3.2.7,M1.1.0", "EST5:60", "<EST5",
+            "",
+            "E5",
+            "EST",
+            "EST5EDT,M3.2.0",
+            "EST5EDT,M13.1.0,M1.1.0",
+            "EST5x",
+            "<AB>5",
+            "EST25",
+            "EST5EDT,J0,J1",
+            "EST5EDT,M3.2.7,M1.1.0",
+            "EST5:60",
+            "<EST5",
         ] {
             assert!(PosixTz::parse(bad).is_err(), "{bad} should fail");
         }
