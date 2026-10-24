@@ -80,10 +80,14 @@ transitions, in-range type and abbreviation indices and plausible offsets
 
 **Evidence context**: `etc/localtime` is usually an *absolute* symlink
 (`/usr/share/zoneinfo/America/New_York`). `discover::resolve_in_root` follows
-it inside the evidence root: absolute targets are re-rooted, `..` is
-normalized, and it gives up after 8 hops (symlink loops). If you just called
-`fs::read("evidence/etc/localtime")`, you'd silently read the analyst's own
-zone file.
+it inside the evidence root one component at a time: a symlink at *any*
+position (the file itself or an intermediate directory such as `usr -> /usr`
+or `etc -> /etc`) is expanded, absolute targets are re-rooted, `..` is clamped
+at the root, and it gives up after 8 hops (symlink loops). `etc/timezone` and
+`etc/hostname` go through the same resolver. If you just called
+`fs::read("evidence/etc/localtime")`, or only checked the last component, the
+OS would follow the links and you'd silently read the analyst's own zone
+file.
 
 ### Year inference (`time/year.rs`)
 

@@ -203,8 +203,9 @@ parallel, one file per worker. A single huge file is parsed by one thread.
 
 - **The evidence defines the zone.** By default the zone comes from
   `etc/localtime` (TZif), resolved inside the evidence root. An absolute
-  symlink such as `/usr/share/zoneinfo/...` is re-rooted, so it doesn't pick up
-  the analyst's own zone. If there's no zone, timeliner warns and assumes UTC,
+  symlink such as `/usr/share/zoneinfo/...` is re-rooted, and so is every
+  symlinked directory on the way (`usr -> /usr`), so it doesn't pick up the
+  analyst's own zone. If there's no zone, timeliner warns and assumes UTC,
   and the report says so.
 - **Years come from the evidence, not the clock.** Phase A parses the
   absolute-time artifacts first. The newest timestamp plus one day caps the

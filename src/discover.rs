@@ -230,36 +230,71 @@ fn sniff(path: &Path) -> Option<ArtifactKind> {
     detect_by_content(&data[..data.len().min(4096)])
 }
 
-/// Resolves `rel` inside `root`, following symlinks but re-rooting absolute
-/// targets under `root` (a mounted image's `/etc/localtime ->
-/// /usr/share/zoneinfo/...` must not resolve to the analysis host's file).
+/// One step of a path being resolved inside an evidence root.
+enum Step {
+    Name(std::ffi::OsString),
+    Parent,
+}
+
+/// Pushes the components of `path` onto `pending` so that they pop in order.
+fn push_steps(pending: &mut Vec<Step>, path: &Path) {
+    let steps: Vec<Step> = path
+        .components()
+        .filter_map(|c| match c {
+            Component::Normal(n) => Some(Step::Name(n.to_os_string())),
+            Component::ParentDir => Some(Step::Parent),
+            // Root, prefix and `.` carry no movement once re-rooted.
+            _ => None,
+        })
+        .collect();
+    pending.extend(steps.into_iter().rev());
+}
+
+/// Resolves `rel` inside `root` the way the suspect host's kernel would, but
+/// with `root` as `/`: **every** component is checked, and a symlink at any
+/// position (`etc -> /etc`, `usr -> /usr`, `etc/localtime ->
+/// /usr/share/zoneinfo/...`) is expanded with absolute targets re-rooted under
+/// `root` and `..` clamped at `root`. A mounted image therefore never resolves
+/// to the analysis host's own files. Returns `None` on a missing component or
+/// after 8 symlinks (loops).
 pub fn resolve_in_root(root: &Path, rel: &str) -> Option<PathBuf> {
-    let mut current = PathBuf::from(rel);
-    for _ in 0..MAX_LINK_HOPS {
-        let full = root.join(&current);
+    let mut pending = Vec::new();
+    push_steps(&mut pending, Path::new(rel));
+    // Invariant: `resolved` names a path under `root` none of whose
+    // components is a symlink, so `..` can be applied lexically.
+    let mut resolved = PathBuf::new();
+    let mut hops = 0;
+    while let Some(step) = pending.pop() {
+        let name = match step {
+            Step::Parent => {
+                resolved.pop();
+                continue;
+            }
+            Step::Name(n) => n,
+        };
+        let candidate = resolved.join(&name);
+        let full = root.join(&candidate);
         let meta = fs::symlink_metadata(&full).ok()?;
         if !meta.file_type().is_symlink() {
-            return Some(full);
+            resolved = candidate;
+            continue;
+        }
+        hops += 1;
+        if hops > MAX_LINK_HOPS {
+            return None;
         }
         let target = fs::read_link(&full).ok()?;
-        let joined = if target.is_absolute() {
-            target.components().skip(1).collect::<PathBuf>()
-        } else {
-            current.parent().unwrap_or(Path::new("")).join(target)
-        };
-        let mut norm = PathBuf::new();
-        for c in joined.components() {
-            match c {
-                Component::ParentDir => {
-                    norm.pop();
-                }
-                Component::Normal(n) => norm.push(n),
-                _ => {}
-            }
+        if target.has_root() {
+            resolved = PathBuf::new();
         }
-        current = norm;
+        push_steps(&mut pending, &target);
     }
-    None
+    Some(root.join(resolved))
+}
+
+/// Reads a small text file at `rel` inside `root` (see [`resolve_in_root`]).
+fn read_in_root(root: &Path, rel: &str) -> Option<String> {
+    fs::read_to_string(resolve_in_root(root, rel)?).ok()
 }
 
 /// Context recovered from an evidence root.
@@ -277,8 +312,7 @@ pub fn evidence_context(root: &Path, zoneinfo_dir: &Path) -> EvidenceContext {
     if let Some(p) = resolve_in_root(root, "etc/localtime")
         && let Ok(bytes) = fs::read(&p)
     {
-        let label = fs::read_to_string(root.join("etc/timezone"))
-            .ok()
+        let label = read_in_root(root, "etc/timezone")
             .map(|s| s.trim().to_string())
             .filter(|s| !s.is_empty())
             .unwrap_or_else(|| "etc/localtime".into());
@@ -288,13 +322,12 @@ pub fn evidence_context(root: &Path, zoneinfo_dir: &Path) -> EvidenceContext {
         }
     }
     if ctx.timezone.is_none()
-        && let Ok(name) = fs::read_to_string(root.join("etc/timezone"))
+        && let Some(name) = read_in_root(root, "etc/timezone")
         && let Ok(tz) = TimeZone::parse(name.trim(), zoneinfo_dir)
     {
         ctx.timezone = Some((tz, "evidence etc/timezone + host zoneinfo".into()));
     }
-    ctx.hostname = fs::read_to_string(root.join("etc/hostname"))
-        .ok()
+    ctx.hostname = read_in_root(root, "etc/hostname")
         .map(|s| s.trim().to_string())
         .filter(|s| !s.is_empty() && s.len() <= 253);
     ctx
@@ -439,6 +472,64 @@ mod tests {
         std::os::unix::fs::symlink("loop2", root.join("loop1")).unwrap();
         std::os::unix::fs::symlink("loop1", root.join("loop2")).unwrap();
         assert_eq!(resolve_in_root(root, "loop1"), None);
+    }
+
+    /// Intermediate components are re-rooted too: `usr -> /usr` or `etc -> /etc`
+    /// in the evidence must never reach the analysis host's own files.
+    #[cfg(unix)]
+    #[test]
+    fn intermediate_symlinks_stay_inside_the_root() {
+        use std::os::unix::fs::symlink;
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        // `usr -> /usr` plus `etc/localtime -> /usr/share/zoneinfo/Asia/Tokyo`:
+        // the host has that file, the evidence does not.
+        fs::create_dir_all(root.join("etc")).unwrap();
+        symlink("/usr", root.join("usr")).unwrap();
+        symlink("/usr/share/zoneinfo/Asia/Tokyo", root.join("etc/localtime")).unwrap();
+        assert_eq!(resolve_in_root(root, "etc/localtime"), None);
+        let ctx = evidence_context(root, Path::new("/nonexistent"));
+        assert_eq!(ctx.timezone, None);
+
+        // `etc -> /etc`: etc/hosts, etc/timezone, etc/hostname must not be
+        // read from the host's /etc (the link re-roots onto itself: a loop).
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        symlink("/etc", root.join("etc")).unwrap();
+        assert_eq!(resolve_in_root(root, "etc/hosts"), None);
+        assert_eq!(resolve_in_root(root, "etc/hostname"), None);
+        assert_eq!(
+            evidence_context(root, Path::new("/nonexistent")),
+            EvidenceContext::default()
+        );
+
+        // Links that stay inside the evidence still resolve, through any
+        // component, with `..` clamped at the root.
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        fs::create_dir_all(root.join("real/share/zoneinfo/America")).unwrap();
+        fs::create_dir_all(root.join("etc")).unwrap();
+        fs::write(root.join("real/share/zoneinfo/America/New_York"), "tz").unwrap();
+        fs::write(root.join("real/hostname"), "web02\n").unwrap();
+        symlink("real", root.join("usr")).unwrap();
+        symlink("/usr/share", root.join("share")).unwrap();
+        symlink(
+            "../../../../share/zoneinfo/./America/New_York",
+            root.join("etc/localtime"),
+        )
+        .unwrap();
+        symlink("/usr/hostname", root.join("etc/hostname")).unwrap();
+        assert_eq!(
+            resolve_in_root(root, "etc/localtime"),
+            Some(root.join("real/share/zoneinfo/America/New_York"))
+        );
+        assert_eq!(
+            evidence_context(root, Path::new("/nonexistent"))
+                .hostname
+                .as_deref(),
+            Some("web02")
+        );
+        assert_eq!(resolve_in_root(root, "etc/missing"), None);
     }
 
     #[test]
