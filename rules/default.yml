@@ -1,0 +1,168 @@
+# timeliner default tagging rules.
+#
+# Each rule adds its `tags` (or its id) and a severity-carrying rule hit to
+# every event it fires on. See src/rules.rs for the matcher language.
+version: 1
+rules:
+  # --- Initial access -------------------------------------------------------
+  - id: ssh-bruteforce
+    title: SSH brute force (>= 5 failures from one source in 5 minutes)
+    severity: high
+    tags: [attack.credential_access, ssh-bruteforce]
+    when:
+      kind: { in: [ssh_login_failure, ssh_invalid_user] }
+    threshold: { count: 5, window: 5m, group_by: [src_ip] }
+
+  - id: ssh-new-ip
+    title: SSH login from a source IP never seen before for this user
+    description: >-
+      Fires only for accounts that already logged in from somewhere else
+      within the timeline (require_history), so an account's very first
+      login is not flagged. Use --baseline-until to declare a learning period.
+    severity: high
+    tags: [attack.initial_access, ssh-new-ip]
+    when:
+      kind: ssh_login_success
+    first_seen: { value: src_ip, group_by: [user], require_history: true }
+
+  - id: ssh-root-login
+    title: Direct SSH login as root
+    severity: high
+    tags: [attack.initial_access, root-login]
+    when:
+      kind: ssh_login_success
+      user: root
+
+  # --- Privilege escalation -------------------------------------------------
+  - id: sudo-to-root
+    title: Command run as root through sudo
+    severity: medium
+    tags: [attack.privilege_escalation, sudo-to-root]
+    when:
+      kind: sudo_command
+      target_user: root
+    unless:
+      command: list
+
+  - id: sudo-root-shell
+    title: Interactive root shell obtained through sudo
+    severity: high
+    tags: [attack.privilege_escalation, root-shell]
+    when:
+      kind: sudo_command
+      target_user: root
+      command: { regex: '^(/usr)?/bin/(ba|z|da|k|fi)?sh( -[il]+)?$|^(/usr)?/bin/su( -)?$|^(/usr)?/bin/(python3?|perl) -c' }
+
+  - id: sudo-failure
+    title: sudo refused or wrong password
+    severity: medium
+    tags: [sudo-failure]
+    when:
+      kind: sudo_failure
+
+  # --- Persistence ----------------------------------------------------------
+  - id: new-user-created
+    title: New local user account created
+    severity: high
+    tags: [attack.persistence, new-user]
+    when:
+      kind: user_created
+
+  - id: user-added-to-admin-group
+    title: Account added to an administrative group
+    severity: high
+    tags: [attack.persistence, admin-group]
+    when:
+      kind: user_modified
+      group: { in: [sudo, wheel, admin, root, adm, docker, lxd] }
+
+  - id: password-changed
+    title: Account password changed
+    severity: low
+    tags: [account-change]
+    when:
+      kind: password_changed
+
+  - id: crontab-modified
+    title: Crontab replaced or edited
+    severity: medium
+    tags: [attack.persistence, crontab]
+    when:
+      kind: crontab_change
+      action: { in: [replace, end edit, delete] }
+
+  - id: cron-runs-from-temp
+    title: Cron job executes a file from a world-writable temp directory
+    severity: critical
+    tags: [attack.execution, attack.persistence, cron-temp]
+    when:
+      kind: cron_command
+      command: { regex: '(^|[\s;|&])(/tmp|/var/tmp|/dev/shm)/' }
+
+  # --- Execution / tooling --------------------------------------------------
+  - id: download-to-temp
+    title: Shell downloads a file into a temp directory
+    severity: high
+    tags: [attack.command_and_control, download]
+    when:
+      kind: shell_command
+      command: { regex: '\b(wget|curl)\b.*(/tmp|/var/tmp|/dev/shm)/' }
+
+  - id: execution-from-temp
+    title: Shell executes or marks executable a file in a temp directory
+    severity: medium
+    tags: [attack.execution, temp-exec]
+    when:
+      kind: shell_command
+      command: { regex: '(chmod\s+\+?[0-7]*x\S*\s+|^|[;&|]\s*)(/tmp|/var/tmp|/dev/shm)/\S+' }
+
+  - id: offensive-tool-installed
+    title: Network / offensive tooling package installed
+    severity: medium
+    tags: [attack.command_and_control, tool-install]
+    when:
+      kind: { in: [package_install, package_transaction] }
+      description: { regex: '\b(netcat(-openbsd|-traditional)?|ncat|nmap|socat|masscan|hydra|proxychains4?)\b' }
+
+  # --- Defense evasion ------------------------------------------------------
+  - id: history-tampering
+    title: Shell history disabled or cleared
+    severity: high
+    tags: [attack.defense_evasion, anti-forensics]
+    when:
+      kind: shell_command
+      command: { regex: 'history\s+-c|unset\s+HISTFILE|HISTFILE=/dev/null|HISTSIZE=0|(rm|shred)\s.*\.(bash|zsh)_history' }
+
+  - id: log-tampering
+    title: Shell command removes or truncates system logs
+    severity: high
+    tags: [attack.defense_evasion, anti-forensics]
+    when:
+      kind: shell_command
+      command: { regex: '(rm|shred|truncate)\s.*/var/log/|>\s*/var/log/' }
+
+  - id: clock-changed
+    title: System clock changed
+    severity: medium
+    tags: [attack.defense_evasion, clock-change]
+    when:
+      kind: clock_change
+
+  # --- File system ----------------------------------------------------------
+  - id: hidden-file-in-temp
+    title: Hidden file born in a temp directory
+    severity: medium
+    tags: [file.temp-hidden]
+    when:
+      kind: file_activity
+      path: { regex: '^/(tmp|var/tmp|dev/shm)/\.[^/]+$' }
+      macb: { regex: 'B' }
+
+  - id: account-database-modified
+    title: Account or sudo configuration file modified
+    severity: medium
+    tags: [file.account-db]
+    when:
+      kind: file_activity
+      path: { in: [/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow, /etc/sudoers] }
+      macb: { regex: '^M' }
