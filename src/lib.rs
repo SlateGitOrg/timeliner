@@ -15,3 +15,4 @@ pub mod time;
 
 pub use error::{Error, Result, Warning};
 pub use event::{Event, EventKind, SourceKind};
+pub mod parsers;
