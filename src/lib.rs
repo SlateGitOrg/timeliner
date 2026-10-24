@@ -15,5 +15,8 @@ pub mod time;
 
 pub use error::{Error, Result, Warning};
 pub use event::{Event, EventKind, SourceKind};
+pub mod dedup;
+pub mod discover;
 pub mod parsers;
+pub mod pipeline;
 pub mod rules;
