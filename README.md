@@ -1,5 +1,7 @@
 # timeliner
 
+[![CI](https://github.com/SlateGitOrg/timeliner/actions/workflows/ci.yml/badge.svg)](https://github.com/SlateGitOrg/timeliner/actions/workflows/ci.yml)
+
 A Linux forensic **super-timeline builder** in Rust. Point it at a mounted or
 collected Linux evidence tree. It parses the system's logs, login records,
 shell histories, journal export, file-system bodyfile and package logs, and
@@ -34,9 +36,9 @@ timeliner normalizes all of it to UTC, using the **evidence's own**
 of the evidence and de-duplicates the copies that rsyslog, journald and log
 rotation create. Then it tags what matters.
 
-It's meant for DFIR students and analysts who want a small, auditable
-alternative to a full plaso run for Linux triage, and for anyone who wants to
-see how such a tool is built and tested against a known ground truth.
+It's meant for analysts who want a small, auditable alternative to a full
+plaso run for Linux triage, with a tool that is tested against a known ground
+truth.
 
 ## Features
 
@@ -90,7 +92,9 @@ Read the deeper design, the algorithms and their complexity in
 are in [DECISIONS.md](DECISIONS.md), and the security model is in
 [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
-## Quickstart
+## Quick start
+
+Prerequisites: Rust 1.85 or newer (edition 2024).
 
 ```sh
 cargo build --release
@@ -115,7 +119,7 @@ first-seen rules), `--no-dedup`, `--dedup-window`, `--no-default-rules` and
 `make demo` builds the release binary and runs [scripts/demo.sh](scripts/demo.sh)
 offline against the committed synthetic incident in
 [fixtures/incident](fixtures/incident) (story:
-[STORY.md](fixtures/incident/STORY.md)). Excerpt from a run on this machine:
+[STORY.md](fixtures/incident/STORY.md)). Excerpt from a run:
 
 ```text
 == 2. Build the super-timeline (zone from the evidence's own /etc/localtime)
@@ -171,9 +175,9 @@ All of these run inside `make check`. The fixture is synthetic: see
 `make check` runs `cargo fmt --check`, `clippy -D warnings`, `rustdoc -D warnings`
 and the full test suite under `cargo llvm-cov --fail-under-lines 80`.
 
-- 118 tests: 94 unit, 7 CLI end-to-end, 7 story/integration, 9 property-based (proptest), 1 binary-unit
+- 125 tests: 99 unit, 7 CLI end-to-end, 8 story/integration, 9 property-based (proptest), 1 binary-unit, 1 doc test
 - property tests cover every parser on arbitrary bytes and on mutated valid input (no panics), plus round-trips: utmp encode/decode, local↔UTC, CSV quoting, and year inference on chronological input
-- line coverage **98.5%** (`make cov` → `TOTAL ... 98.50%` on the fresh-clone run, 98.49% on an earlier run; the proptest inputs vary). It's measured over all `src/` files. Inline `#[cfg(test)]` modules are part of those files, so the figure includes test code. The lowest file is `error.rs` at 66.67%.
+- line coverage **98.5%** (`make cov`; the proptest inputs make the last digit vary). It's measured over all `src/` files. Inline `#[cfg(test)]` modules are part of those files, so the figure includes test code. The lowest file is `error.rs` at 66.67%.
 
 Source size (`make loc`): 8,254 non-test lines in `src/` (about 1,680 of them
 are the fixture generator), 2,153 lines of inline unit tests, 605 lines of
@@ -250,7 +254,6 @@ There are 17 rulings with their trade-offs in [DECISIONS.md](DECISIONS.md).
 - Files are read fully into memory, and gzip output is capped at 1 GiB per
   file. Very large single logs are parsed by one thread.
 - Every output is in UTC. There's no option to render in another zone yet.
-- The CI workflow has never run (the repository has not been pushed).
 
 ## Roadmap
 
@@ -262,4 +265,4 @@ There are 17 rulings with their trade-offs in [DECISIONS.md](DECISIONS.md).
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
