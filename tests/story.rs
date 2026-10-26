@@ -133,7 +133,7 @@ fn year_inference_is_load_bearing_without_the_journal() {
     assert!(check.found.iter().any(|(id, i)| id == "S17" && i.is_none()));
 }
 
-/// Review finding: one forged `#<epoch>` line in the suspect's own shell
+/// Regression: one forged `#<epoch>` line in the suspect's own shell
 /// history moved every year-less event to 2049/2050. With and without the
 /// journal, the forged line must not change the anchor, the dedup count or the
 /// story.

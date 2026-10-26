@@ -561,7 +561,7 @@ Jan  1 00:00:10 web01 sshd[1]: Failed password for root from 1.2.3.4 port 5 ssh2
         (0..n).map(|i| at(y, mo, d) + Duration::days(i)).collect()
     }
 
-    /// Review finding: loose rotated logs with no absolute timestamps were
+    /// Regression: loose rotated logs with no absolute timestamps were
     /// pinned to the *current year*, putting Nov/Dec entries in the future and
     /// after the newer file. The clock is an upper bound, not a year.
     #[test]
@@ -602,7 +602,7 @@ Jan  1 00:00:10 web01 sshd[1]: Failed password for root from 1.2.3.4 port 5 ssh2
         assert!(tl.report.year_anchor.starts_with("fallback"));
     }
 
-    /// Review finding: one `#<epoch>` line appended to a shell history moved
+    /// Regression: one `#<epoch>` line appended to a shell history moved
     /// every year-less entry decades ahead. System records now take
     /// precedence, and history-only anchors reject future and outlying values.
     #[test]

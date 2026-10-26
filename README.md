@@ -88,8 +88,7 @@ flowchart LR
 ```
 
 Read the deeper design, the algorithms and their complexity in
-[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). The rulings made along the way
-are in [DECISIONS.md](DECISIONS.md), and the security model is in
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). The design decisions are in [DECISIONS.md](DECISIONS.md), and the security model is in
 [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
 ## Quick start
@@ -227,7 +226,7 @@ parallel, one file per worker. A single huge file is parsed by one thread.
 - **Reports are reproducible.** No generation timestamp, stable sort keys and
   seeded fixtures.
 
-There are 17 rulings with their trade-offs in [DECISIONS.md](DECISIONS.md).
+There are 17 design decisions with their trade-offs in [DECISIONS.md](DECISIONS.md).
 
 ## Limitations
 
